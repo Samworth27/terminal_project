@@ -1,19 +1,7 @@
 # frozen_string_literal: true
 
-# # Defines function for inbuilt instance counter
-# module InstanceCounter
-#   # Inbuilt Counter
-#   def self.count
-#     @count
-#   end
-
-#   def self.count=(value)
-#     @count = value
-#   end
-# end
-
 # Item Class
-class Item
+class QueueItem
   @count = 0
   attr_reader :id, :fname, :lname, :symptom_flags, :time_presented
   attr_accessor :notes, :priority

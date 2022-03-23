@@ -1,7 +1,9 @@
-require './queue'
-
-describe Queue do
-  let(:test_queue) { Queue.new('ER', 'Contains all patients presenting to the ER')}
+require './queue_object'
+require './item'
+describe QueueObject do
+  let(:test_queue) { QueueObject.new('ER', 'Contains all patients presenting to the ER') }
+  let(:john_smith) { Item.new({fname: 'John', lname: 'Smith' }) }
+  let(:jane_doe) { Item.new({fname: 'Jane', lname: 'Doe' }) }
 
   it 'can be created' do
     expect(test_queue).to exist
@@ -22,9 +24,14 @@ describe Queue do
   end
 
   describe '#add_item' do
-    it 'can add an item' do
-      pending 'waiting on queue_item class'
-      fail
+    it 'accepts valid input' do
+      test_queue.add_item(john_smith)
+      expect(test_queue.queue.length).to eq(1)
+      test_queue.add_item(jane_doe)
+      expect(test_queue.queue.length).to eq(2)
+    end
+    it 'rejects invalid output' do
+      expect { test_queue.add_item(1)}.to raise_error(InvalidInput)
     end
   end
 
