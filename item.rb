@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Item Class
-class QueueItem
+class Item
   @count = 0
   attr_reader :id, :fname, :lname, :symptom_flags, :time_presented
   attr_accessor :notes, :priority

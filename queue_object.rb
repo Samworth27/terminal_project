@@ -13,7 +13,7 @@ class QueueObject
   def initialize(name, description)
     @name = name
     @description = description
-    @queue = []
+    @queue = {}
   end
 
   def exist?
@@ -23,6 +23,12 @@ class QueueObject
   def add_item(item)
     raise(InvalidInput, "inputted #{item.class} not Item") if item.class != Item
 
-    @queue.append(item)
+    @queue[item.id] = item
+  end
+
+  def view_item(id)
+    raise(InvalidInput, "inputeed #{id.class} not Integer") if id.class != Integer
+
+    @queue[id]
   end
 end
