@@ -1,4 +1,4 @@
-require './queue'
+require './src/queue'
 
 describe Queue do
   let(:test_queue) { Queue.new('ER', 'Contains all patients presenting to the ER')}
