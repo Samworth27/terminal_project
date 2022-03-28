@@ -1,7 +1,7 @@
 # Custom binary flag data type
 
-def flag_active (flags,item)
-  return !(flags & item).zero?
+def flag_active(flags, item)
+  !(flags & item).zero?
 end
 
 def create_method(name, value)
@@ -16,35 +16,31 @@ def create_method(name, value)
     if set == true
       @value |= value
     elsif set == false
-      @value &=(value ^ (2**self.class.flags.size-1))
+      @value &= (value ^ (2**self.class.flags.size - 1))
     end
   end
 end
 
-
-
 class Flags
   @flags = {}
-  
-  def initialize(flag_names='')
+
+  def initialize(flag_names = '')
     @value = 0b0000000
 
     # Populate 8 flags for testing
     if flag_names == 'testing'
       flag_names = []
-      1.upto(8).each {|i| flag_names.append("flag_#{i}".to_sym)}
+      1.upto(8).each { |i| flag_names.append("flag_#{i}".to_sym) }
     end
 
     # If no value is passed when creating the class get the class instance values for flag_name - This is normal behaviour
-    if flag_names == ''
-      flag_names = self.class.flags.keys
-    end
+    flag_names = self.class.flags.keys if flag_names == ''
 
     # If this is the first time initilising the class, set the class values for the flags hash
     if self.class.flags == {}
       flag_names.each_with_index do |flag, index|
         flag_value = 0b1 << index
-        self.class.flags[flag] = flag_value 
+        self.class.flags[flag] = flag_value
       end
     end
 
@@ -53,28 +49,25 @@ class Flags
       create_method(flag, flag_value)
     end
   end
-  
-
-
 
   def flags
     self.class.flags
   end
 
-  def self.flags
-    @flags
+  class << self
+    attr_reader :flags
   end
 
-  def self.flags=(value)
-    @flags = value
+  class << self
+    attr_writer :flags
   end
 
   def to_s
-    return "0b#{'%08b' % @value}"
+    "0b#{format('%08b', @value)}"
   end
 
   def to_i
-    return @value
+    @value
   end
 
   def exists?

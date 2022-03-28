@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
+    ethon (0.15.0)
+      ffi (>= 1.15.0)
+    ffi (1.15.5)
     respec (0.9.1)
       rspec (>= 2.11)
     rspec (3.11.0)
@@ -25,6 +28,8 @@ GEM
       tty-screen (~> 0.8)
       unicode-display_width (>= 1.6, < 3.0)
     tty-screen (0.8.1)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     unicode-display_width (2.1.0)
 
 PLATFORMS
@@ -33,6 +38,7 @@ PLATFORMS
 DEPENDENCIES
   respec
   tty-progressbar
+  typhoeus
 
 BUNDLED WITH
    2.3.9
