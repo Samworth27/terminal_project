@@ -1,4 +1,4 @@
-require './item'
+require './src/item'
 
 describe Item do
   let(:test_item) { Item.new({fname: 'John', lname: 'Smith'})}
@@ -30,7 +30,7 @@ describe Item do
       end
 
       it 'can init @symptom_flags correctly' do
-        expect(test_item.symptom_flags).to eq(0)
+        expect(test_item.flags).to eq(0)
       end
 
       it 'can init @notes correctly' do
@@ -41,5 +41,9 @@ describe Item do
         expect(test_item.priority).to eq(3)
       end
     end
+  end
+
+  describe '#modify' do
+    it 'can modify item variable'
   end
 end

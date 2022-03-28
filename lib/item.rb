@@ -15,7 +15,7 @@
 # Item Class
 class Item
   @count = 0
-  attr_reader :id, :fname, :lname, :symptom_flags, :time_presented
+  attr_reader :id, :fname, :lname, :flags, :time_presented
   attr_accessor :notes, :priority
 
   def initialize(name)
@@ -24,7 +24,7 @@ class Item
     @fname = name[:fname]
     @lname = name[:lname]
     @time_presented = Time.new
-    @symptom_flags = 0
+    @flags = 0
     @notes = []
     @priority = 3
     # puts "Item init with id #{@id} @ #{@time_presented}"

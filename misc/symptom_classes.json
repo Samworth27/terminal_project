@@ -1,0 +1,156 @@
+[
+    {
+        "id": 1,
+        "text": "A1 Visits for general examination, routine examination, family planning, prevention, and other visits",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 8,
+        "text": "A General",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 11,
+        "text": "B Blood, blood-forming organs and immune system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 14,
+        "text": "D Digestive system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 17,
+        "text": "F Eye",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 20,
+        "text": "G Genital system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 23,
+        "text": "H Ear",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 26,
+        "text": "K Circulatory system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 29,
+        "text": "L Musculoskeletal system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 32,
+        "text": "N Neurological system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 35,
+        "text": "P Psychological, mental and neurodevelopmental",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 38,
+        "text": "R Respiratory system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 41,
+        "text": "S Skin",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 44,
+        "text": "T Endocrine, metabolic and nutritional system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 47,
+        "text": "U Urinary system",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 50,
+        "text": "W Pregnancy and childbearing",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 53,
+        "text": "Z Social problems",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 55,
+        "text": "I Interventions and Processes",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 62,
+        "text": "II Functioning and Functioning Related",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 65,
+        "text": "III Regional Extension",
+        "state": null,
+        "type": "regionalChapter",
+        "children": true
+    },
+    {
+        "id": 69,
+        "text": "IV Emergency codes",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    },
+    {
+        "id": 79,
+        "text": "V Extension Codes",
+        "state": null,
+        "type": "chapter",
+        "children": true
+    }
+]

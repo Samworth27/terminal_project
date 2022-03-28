@@ -1,0 +1,1236 @@
+AS01 General pain in multiple sites
+AS02 Chills
+AS03 Fever
+AS04 General weakness or tiredness
+AS05 Postviral fatigue
+AS05.00 Chronic fatigue syndrome
+AS06 Feeling ill
+AS07 Fainting
+AS09 Swelling and generalized edema
+AS10 Sweating problem
+AS10.00 Localised hyperhidrosis
+AS10.01 Night sweats
+AS11 Bleeding
+AS12 Chest pain
+AS13 Irritable infant
+AS14 Fall of unknown origin
+AS50 Other specified abnormal result investigation
+AS50.00 Elevated blood glucose level
+AS50.01 Subclinical hypothyroidism
+AS50.02 Subclinical hyperthyroidism
+AS52 Shock
+AS53 Coma
+AS90 Concern or fear of disease
+AS91 Concern or fear of medical treatment
+AS92 Concern about appearance
+"AS99 Other specified gen symptoms, complts and abn findings"
+AS99.00 Cold extremities
+AD01 Measles
+AD02 Chickenpox
+AD03 Rubella
+AD04 Infectious mononucleosis
+AD13 Other specified and unknown viral exanthems
+AD13.00 Erythema infectiosum (fifth disease)
+AD13.01 Exanthema subitum (6th disease/roseola infantum)
+AD13.02 Hand foot and mouth disease
+AD14 Other specified and unknown viral diseases
+AD14.00 Chikungunya fever
+AD14.01 Dengue fever
+AD14.02 Dengue haemorrhagic fever
+AD14.03 Ebola virus disease
+AD14.04 Hantavirus disease
+AD14.05 Lassa fever
+AD14.06 Rabies
+AD14.07 Yellow fever
+AD14.08 Zika virus disease
+AD15 Tuberculosis
+AD16 Malaria
+AD17 Leishmaniasis
+AD17.00 Cutaneous leishmaniasis
+AD17.01 Mucocutaneous leishmaniasis
+AD17.02 Visceral leishmaniasis
+AD23 Sepsis
+AD24 Other specified and unknown infectious diseases
+AD24.00 African trypanosomiasis
+AD24.01 Chagas disease (South American trypanosomiasis)
+AD24.02 Filariasis
+AD24.03 Infection caused by Onchocerca volvulus
+AD24.05 Lyme disease
+AD24.06 Leprosy (Hansen's disease)
+AD24.07 Loiasis
+AD24.08 Lymphatic filariasis
+AD24.09 Scarlet fever
+AD25 Malignancy
+"AD26 Other specified benign, uncertain or in situ neoplasms"
+AD35 Multiple trauma and injuries
+AD36 Other specified and unknown trauma and injury
+AD37 Secondary effect of trauma
+AD40 Poisoning by medical agent
+AD41 Adverse effect of medical agent
+AD41.00 Drug allergy
+AD41.01 Drug induced headache
+AD41.02 Spotting using hormonal contraception
+AD42 Complication of medical treatment
+AD42.00 Adverse effect of vaccination
+AD42.01 Dehiscence episiotomy
+AD43 Side-effect of prosthetic device
+AD44 Toxic effect of non-medicinal substance
+AD44.00 Poisoning caused by venomous snake
+AD45 Adverse effect of physical factor
+AD45.00 Chilblains (perniones)
+AD45.01 Heat stroke and sunstroke
+AD45.02 Motion sickness
+AD46 Other specified and unknown allergy or allergic reaction
+AD46.00 Anaphylactic shock
+AD46.01 Angioneurotic oedema
+AD46.02 Cow's milk protein allergy
+"AD55 Congenital anomaly, other specified or unknown"
+AD55.00 Complete trisomy 21 syndrome (Down syndrome)
+AD65 Premature newborn
+AD66 Other specified and unknown perinatal morbidity
+AD95 Perinatal mortality
+AD95.00 Newborn death
+AD95.01 Undelivered in utero foetal death
+AD96 Death
+AD96.00 Natural death
+AD96.01 Unnatural death
+AD99 Other spec or unknown gen diseases or conditions of unspec site
+BS01 Lymph gland(s) symptom or complaint
+BS50 Splenomegaly
+BS51 Unexplained changes in white blood cells
+BS52 Elevated erythrocyte sedimentation rate
+"BS90 Concern or fear of disease of blood, blood-forming organs and immune system"
+"BS99 Other spec sympts, complts or abn findings of blood, blood-forming organs and immune system"
+BD01 Lymphadenitis acute
+BD02 Other specified or unknown lymphadenitis
+BD03 Asymptomatic HIV-infection
+BD04 Symptomatic HIV-infection/AIDS
+"BD25 Malignant neopl of blood, blood-forming organs and immune system"
+BD25.00 Hodgkin lymphoma
+"BD25.01 Malignant lymphoma, not elsewhere classified"
+BD25.02 Leukaemia
+BD25.03 Plasma cell myeloma
+BD25.04 Burkitt lymphoma
+"BD26 Benign, uncertain or in-situ neopl of blood, blood-forming organs and immune system"
+"BD35 Injury of blood, blood-forming organs and immune system"
+BD35.00 Traumatic ruptured spleen
+"BD55 congen anomaly of blood, blood-forming organs and immune system"
+BD65 Hereditary haemolytic anaemia
+BD65.00 Haemolytic anaemia due to glucose-6-phosphate dehydrogenase deficiency
+BD65.01 Sickle cell disorders or other haemoglobinopathies
+BD65.02 Thalassaemias
+BD66 Iron deficiency anaemia
+BD67 Vitamin B12 anaemia or folate deficiency anaemia
+BD67.00 Folate deficiency anaemia
+BD67.01 Megaloblastic anaemia due to vitamin B12 deficiency
+BD77 Other specified and unknown anaemias
+BD77.00 Severe anaemia
+BD78 Coagulation defect
+BD78.00 Hereditary factor VIII deficiency
+BD78.01 Hereditary factor IX deficiency
+BD78.02 Immune thrombocytopenic purpura
+BD78.03 Thrombophilia
+"BD99 Other spec or unknown blood, blood-forming organs, immune system diagnoses or diseases"
+BD99.00 Immunodeficiency
+BD99.01 Sarcoidosis
+DS01 General abdominal pain
+DS02 Epigastric pain
+DS03 Heartburn
+DS04 Rectal or anal pain
+DS05 Perianal itching
+DS06 Other specified localized abdominal pain
+DS07 Dyspepsia and or indigestion
+"DS08 Flatulence, gas and belching"
+DS09 Nausea
+DS10 Vomiting
+DS11 Diarrhoea
+DS12 Constipation
+DS13 Jaundice
+DS14 Haematemesis
+DS15 Melaena
+DS16 Rectal bleeding
+DS17 Incontinence of bowel
+DS18 Change in faeces and bowel movements
+"DS19 Teeth, gum symptom or complaint"
+"DS20 Mouth, tongue, lip symptom or complaint"
+DS21 Swallowing problem
+DS50 Hepatomegaly
+DS51 Abdominal distension or abdominal mass or both
+DS51.00 Ascites
+DS90 Concern or fear of disease of digestive system
+"DS99 Other spec or unknown sympts, complts, abn findings of digestive system"
+DD01 Gastrointestinal infection
+DD01.00 Amoebiasis
+DD01.01 Campylobacter
+DD01.02 Giardia
+DD01.03 Salmonellosis
+DD01.04 Shigella
+DD01.05 Typhoid
+DD01.06 Yersinia enterocolitica
+DD01.07 Cholera
+DD01.08 Cryptosporidiosis
+DD02 Mumps
+DD03 Viral hepatitis
+DD03.00 Acute viral hepatitis A
+DD03.01 Acute viral hepatitis B
+DD03.02 Acute viral hepatitis C
+DD03.03 Acute viral hepatitis E
+DD03.04 Chronic viral hepatitis B
+DD03.05 Chronic viral hepatitis C
+DD03.06 Chronic viral hepatitis D
+DD03.07 Chronic viral hepatitis E
+DD05 Gastroenteritis presumed infection
+DD05.00 Diarrhoeal disease
+DD06 Perianal abscess
+DD07 Intestinal helminths
+DD07.00 Ascariasis
+DD07.01 Oxyuriasis
+DD07.02 Taeniasis
+DD07.04 Cyclosporiasis
+DD07.05 Schistosomiasis
+DD07.06 Strongyloidiasis
+DD07.07 Hookworm disease
+DD07.08 Trichuriasis
+DD07.09 Cysticercosis
+DD07.10 Echinococcosis
+DD25 Malignant neoplasm of stomach
+DD26 Malignant neoplasm of large intestine
+DD27 Malignant neoplasm of pancreas
+DD28 Other specified or unknown malignant digestive neoplasm
+DD28.00 Malignant neoplasm of lips/mouth/tongue
+DD28.01 Malignant neoplasm of liver
+DD28.02 Malignant neoplasm of oesophagus
+DD28.03 Malignant neoplasm of pharynx
+DD28.04 Malignant neoplasm of salivary glands
+DD28.05 Malignant neoplasm of gallbladder and bile ducts
+DD29 Benign or uncertain neopl or carcinoma in situ neopl of digestive system
+DD29.00 Familial polyposis syndrome
+DD35 Injury of digestive system
+DD36 Foreign body in digestive system
+DD55 Congenital anomaly of digestive system
+DD55.00 Cleft lip/gum/palate
+DD55.01 Congenital pyloric stenosis
+DD55.02 Meckels diverticulum
+DD55.03 Tongue-tie
+DD65 Teeth or gum disease or both
+DD65.00 Gingivitis
+DD65.01 Temporomandibular joint disorder
+DD65.02 Caries of deciduous teeth
+DD65.03 Caries of permanent teeth
+"DD66 Mouth, tongue or lip diseases"
+DD66.00 Angular stomatitis
+"DD66.01 Candidiasis of mouth, oral sprue"
+DD66.02 Oral aphthae
+DD66.03 Salivary stone
+DD67 Gastro-oesophageal reflux disease
+DD67.00 Gastro-oesophageal reflux disease with oesophagitis
+DD67.01 Gastro-oesophageal reflux disease without oesophagitis
+DD68 Other specified or unknown oesophagus disease
+DD68.00 Barrett's oesophagitis
+DD68.01 Benign esophageal stricture
+DD68.02 Oesophageal diverticulum
+DD68.03 Zenker's diverticulum
+DD69 Duodenal ulcer
+DD70 Other specified or unknown peptic ulcer
+DD70.00 Ulcus ventriculi
+DD71 Gastritis or duodenitis or both
+DD72 Appendicitis
+DD73 Inguinal hernia
+DD74 Hiatus hernia
+DD75 Umbilical hernia
+DD76 Other specified or unknown abdominal hernia
+DD76.00 Femoral hernia
+DD76.01 Incisional hernia
+DD77 Diverticular disease
+DD78 Irritable bowel syndrome
+DD79 Inflammatory bowel disease
+DD79.00 Regional enteritis
+DD79.01 Ulcerative colitis
+DD80 Anal fissure or anal fistula or both
+DD80.00 Anal fissure
+DD80.01 Fistula ani
+DD81 Other specified or unknown liver diseases
+DD81.00 Cirrhosis of liver
+DD81.01 Steatosis of liver
+DD82 Cholecystitis or cholelithiasis or both
+DD82.00 Cholangitis
+DD82.01 Cholecystitis
+DD82.02 Cholelithiasis
+DD83 Coeliac disease
+DD84 Haemorrhoids
+DD99 Other spec or unknown diagnoses or diseases of digestive system
+DD99.00 Entrapment of intestine in abdominal adhesions
+DD99.01 Ileus
+DD99.02 Intestinal intussusception
+DD99.03 Pancreatitis
+DD99.04 Peritonitis
+FS01 Eye pain
+FS02 Red eye
+FS03 Eye discharge
+FS03.00 Watery eye
+FS04 Visual floaters or spots
+FS05 Decreased visual acuity
+FS06 Other specified visual disturbances
+FS07 Dry eye or other abnormal eye sensations
+FS07.00 Dry eye (syndrome)
+FS08 Abnormal eye appearance
+FS09 Eyelid symptoms or complaints
+FS09.00 Blepharochalasis
+FS09.01 Xanthelasma palpebrarum
+FS10 Glasses or contact lenses symptoms or complaints
+FS90 Concern or fear of eye disease
+"FS99 Other specified symptoms, complts, abn findings of eye"
+FD01 Infectious conjunctivitis
+FD01.00 Bacterial conjunctivitis
+FD01.01 Viral conjunctivitis
+FD02 Blepharitis or stye or chalazion
+FD02.00 Blepharitis
+FD02.01 Chalazion
+FD02.02 Hordeolum
+FD03 Other spec or unknown eye infections or inflammations
+FD03.00 Dacryocystitis
+FD03.01 Iridocyclitis
+FD03.02 Keratitis
+FD04 Trachoma
+FD05 Corneal ulcer
+FD05.00 Herpes simplex keratitis dendritic
+FD25 Neoplasm of eye or adnexa
+FD25.00 Benign neoplasm eye
+FD25.01 Malignant tumor of eye
+FD25.02 .Uncertain neoplasm of eye
+FD35 Contusion or haemorrhage eye or both
+FD35.00 Black eye
+FD35.01 Subconjunctival hemorrhage
+FD36 Other specified and unknown injury of eye
+FD36.00 Corneal abrasion
+FD36.01 Snow blindness
+FD37 Foreign body in eye
+FD55 Congenital stenosis or stricture of lacrimal duct
+FD56 Other specified or unknown congenital anomaly of eye
+FD65 Allergic conjunctivitis
+FD66 Detached retina
+FD67 Retinopathy
+FD67.00 Arteriosclerotic retinopathy
+FD67.01 Diabetic retinopathy
+FD68 Macular degeneration
+FD69 Disorders of refraction and accommodation
+FD69.00 Astigmatism
+FD69.01 Hypermetropia
+FD69.02 Myopia
+FD69.03 Presbyopia
+FD70 Cataract
+FD70.00 Senile cataract
+FD71 Glaucoma
+FD71.00 Narrow-angle glaucoma
+FD71.01 Open-angle glaucoma
+FD71.02 Raised intraocular pressure
+FD71.03 Secondary glaucoma
+FD72 Blindness
+FD73 Strabismus
+FD74 Pterygium
+FD99 Other spec or unknown diagnosis or diseases of eye and adnexa
+FD99.00 Ectropion
+FD99.01 Entropion
+FD99.02 Episcleritis
+FD99.03 Scleritis
+GS01 Pain in penis
+GS02 Pain in testis
+GS03 Other specified genital pain
+GS04 Pain in breast
+GS05 Menstrual pain
+GS06 Intermenstrual pain
+GS07 Absent or scanty menstruation
+GS07.00 Amenorrhea
+GS07.01 Hypomenorrhea
+GS07.02 Oligomenorrhea
+GS08 Excessive menstruation
+GS09 Irregular or frequent menstruation
+GS09.00 Irregular periods
+GS09.01 Polymenorrhea
+GS10 Intermenstrual bleeding
+GS10.00 Ovulation bleeding
+GS11 Premenstrual symptoms or complaints
+GS13 Menopausal symptoms or complaints
+GS13.00 Atrophic vaginitis
+GS13.01 Menopausal flushing
+GS14 Postmenopausal bleeding
+GS15 Postcoital bleeding
+GS16 Vaginal discharge
+GS17 Other specified vaginal symptoms or complaints
+GS18 Vulval symptoms or complaints
+GS19 Pelvis symptoms or complaints
+GS20 Penis symptoms or complaints
+GS21 Scrotum or testis symptoms or complaints
+GS21.00 Swelling of testis
+GS22 Prostate symptoms or complaints
+GS23 Painful intercourse
+GS24 Impotence or erectile dysfunction
+GS25 Other specified sexual function symptoms or complaints
+GS26 Lump or mass in breast
+GS27 Nipple symptoms or complaints
+GS27.00 Nipple discharge
+GS28 Other specified breast symptoms or complaints
+GS28.00 Gynaecomastia
+GS29 Infertility or subfertility
+GS50 Abnormal cervix smear
+GS90 Concern about breast appearance
+GS91 Concern or fear of sexual dysfunction
+GS92 Concern or fear of sexually transmitted infection
+GS93 Concern or fear of breast cancer
+GS94 Other spec concern or fear of disease of genital system
+GS94.00 Fear of prostate cancer
+"GS99 Other spec sympts, complts and abn findings of genital system"
+GD01 Syphilis
+GD02 Gonorrhoea
+GD03 Genital herpes
+GD04 Genital trichomoniasis
+GD05 Genital human papilloma virus infection
+GD06 Genital Chlamydia infection
+GD06.00 Cervicitis caused by Chlamydia
+GD06.01 Pelvic inflammatory disease by Chlamydia
+GD06.02 Vaginitis caused by Chlamydia
+GD06.03 Chlamydia-infection male
+GD07 Other specified or unknown sexual transmitted disease
+GD07.00 Lymphogranuloma venerum
+GD08 Genital candidiasis or balanitis
+GD08.00 Candida balanitis
+GD09 Pelvic inflammatory disease
+GD10 Prostatitis or seminal vesiculitis or both
+GD11 Orchitis or epididymitis
+GD11.00 Epididymitis
+GD11.01 Orchitis
+GD12 Vaginitis or vulvitis
+GD12.00 Vaginosis (bacterial)
+GD25 Malignant neoplasms of cervix
+GD26 Malignant neoplasms of prostate
+GD27 Malignant neoplasms of breast
+GD27.00 Adenocarcinoma mammae
+GD28 Other specified or unknown malignant genital neoplasms
+GD28.00 Adenocarcinoma of endometrium
+GD28.01 Malignancy of ovaries
+GD28.02 Malignant neoplasm of penis
+GD28.03 Malignant neoplasm of testis
+GD28.04 Malignant neoplasm of uterus
+GD29 Fibromyoma of uterus or cervix or both
+GD29.00 Myoma of uterus
+GD30 Benign neoplasms of breast
+GD31 Benign neoplasms of genital system
+"GD32 Genital neoplasm, in situ or uncertain"
+GD35 Genital injuries
+GD35.00 Corpus alienum genital tract
+GD55 Congenital anomaly of genital system
+GD55.00 Imperforate hymen
+GD55.01 Retractile testis
+GD56 Hypospadias
+GD57 Undescended testicle
+GD65 Cervical disease
+GD65.00 Cervical erosion
+GD65.01 Cervical polyp
+GD66 Uterovaginal prolapse
+GD66.00 Cystocele
+GD66.01 Rectocele
+GD67 Fibrocystic disease breast
+GD68 Premenstrual tension syndrome
+GD69 Endometriosis
+GD70 Benign prostatic hypertrophy
+GD71 Hydrocele or spermatocele or both
+GD71.00 Hydrocele
+GD71.01 Spermatocele
+GD72 Phimosis or paraphimosis
+GD99 Other spec and unknown diagnoses and diseases of genital system
+GD99.00 Bartholinitis
+GD99.01 Mastitis (non-lactating)
+GD99.02 Ovarian cyst
+GD99.03 Torsion of testis
+HS01 Ear pain or ache
+HS02 Hearing complaint
+"HS03 Tinnitus, ringing or buzzing ear"
+HS04 Ear discharge
+HS05 Bleeding ear
+HS06 Plugged feeling in ear
+HS90 Concern or fear of ear disease
+HS91 Concern about appearance of ears
+"HS99 Other specified symptoms, complts, abn findings of ear"
+HD01 Otitis externa
+HD02 Acute otitis media or myringitis
+HD03 Serous otitis media
+HD04 Eustachian salpingitis
+HD05 Chronic otitis media
+HD05.00 Cholesteatoma
+HD05.01 Chronic otitis media
+HD05.02 Mastoiditis
+HD25 Neoplasm of ear
+HD25.00 Benign neoplasm of ear
+HD25.01 Malignant neoplasm of ear
+HD25.02 Uncertain neoplasm of ear
+HD35 Acoustic trauma
+HD36 Foreign body in ear
+HD37 Other specified or unknown ear injury
+HD55 Congenital anomaly of ear
+HD55.00 Bat ears
+HD65 Perforation of ear drum
+HD66 Excessive ear wax
+HD67 Vestibular syndrome
+HD67.00 Benign paroxysmal positional vertigo
+HD67.01 Labyrinthitis
+HD67.02 Meniere disease
+HD68 Presbycusis
+HD69 Deafness
+HD99 Other spec or unknown diagnoses or diseases of ear and mastoid
+"KS01 Pain, pressure, tightness of heart"
+"KS02 Palpitations, awareness of heart"
+KS03 Irregular heartbeat
+KS04 Ankle oedema
+KS50 Low blood pressure
+KS51 Elevated blood pressure
+KS52 Heart murmur or arterial murmur or both
+KS90 Concern or fear of disease of circulatory system
+"KS99 Other spec sympts, complts, abn findings of circulatory system"
+KD01 Infection of circulatory system
+KD02 Rheumatic heart disease
+KD02.00 Acute rheumatic fever with heart disease
+KD02.01 Acute rheumatic fever without heart disease
+KD25 Neoplasms circulatory system
+KD25.00 Benign cardiovascular neoplasm
+KD25.01 Malignant cardiovascular neoplasm
+KD25.02 Uncertain cardiovascular neoplasm
+KD35 Injury of circulatory system
+KD55 Congenital anomaly of circulatory system
+KD55.00 Congenital anomaly of atrial septum
+KD55.01 Ventricular septal defect
+KD65 Acute coronary syndrome
+KD65.00 Acute myocardial infarction
+KD65.01 Unstable angina pectoris
+KD66 Chronic ischaemic heart disease
+KD66.00 Coronary sclerosis
+KD66.01 Old myocardial infarction
+KD66.02 Stable angina
+KD67 Heart failure
+KD67.00 Acute heart failure
+KD67.01 Chronic heart failure
+KD68 Atrial fibrillation or flutter
+KD69 Paroxysmal tachycardia
+KD69.00 Supraventricular tachycardia
+KD69.01 Ventricular tachycardia
+KD70 Cardiac arrhythmia or conduction disorder or both
+KD70.00 Atrioventricular block
+KD70.01 Long Q-T syndrome
+KD70.02 Sick-sinus syndrome
+KD70.03 Supraventricular extrasystoles
+KD70.04 Ventricular extrasystoles
+KD70.05 Wolff-Parkinson-White syndrome
+KD71 Heart valve disease
+KD71.00 Cardiac valve prolapse
+KD71.01 Mitral valve insufficiency or incompetence or mitral regurgitation
+KD71.02 Stenosed aortic valve
+KD72 Other specified and unknown heart disease
+KD72.00 Cardiac arrest
+KD72.01 Cardiac arrest with successful resuscitation
+KD72.02 Cardiomyopathy
+"KD73 Hypertension, uncomplicated"
+"KD74 Hypertension, complicated"
+KD75 Postural hypotension
+KD76 Atherosclerosis or peripheral vascular disease
+KD76.00 Intermittent claudication
+KD76.01 Raynaud's syndrome
+KD76.02 Thromboangiitis obliterans
+KD77 Pulmonary embolism
+KD78 Thrombosis or phlebitis or thrombophlebitis
+KD78.00 Deep vein thrombosis
+KD78.01 Superficial vein thrombophlebitis
+KD79 Varicose veins
+KD79.00 Scrotal varices/varicocele
+KD79.01 Venous insufficiency
+KD99 Other spec and unknown diagnoses and diseases of the circulatory system
+KD99.00 Aortic aneurysm or dissection
+KD99.01 Diabetic peripheral angiopathy
+KD99.02 Oesophageal varices
+KD99.03 Arteritis temporalis
+KD99.04 Lymphoedema
+LS01 Neck symptom or complaint
+LS02 Back symptom or complaint
+LS03 Low back symptom or complaint
+LS04 Musculoskeletal chest symptom or complaint
+LS05 Flank or axilla symptom or complaint
+LS06 Jaw symptom or complaint
+LS07 Shoulder symptom or complaint
+LS08 Arm symptom or complaint
+LS09 Elbow symptom or complaint
+LS10 Wrist symptom or complaint
+LS11 Hand or finger (or both) symptom or complaint
+LS12 Hip symptom or complaint
+LS13 Leg or thigh (or both) symptom or complaint
+LS14 Knee symptom or complaint
+LS15 Ankle symptom or complaint
+LS16 Foot or toe (or both) symptom or complaint
+LS16.00 Metatarsalgia
+LS17 Muscle pain
+LS18 Chronic widespread pain
+LS18.00 Primary fibromyalgia syndrome
+LS19 Muscle symptom or complaint
+LS20 Other specified joint symptoms or complaints
+LS90 Concern or fear of disease of musculoskeletal system
+"LS99 Other spec sympts, complts and abn findings of musculoskeletal system"
+LD01 Infection of musculoskeletal system
+LD01.00 Bacterial (septic) arthritis
+LD01.01 Osteomyelitis
+LD25 Malignant neoplasm musculoskeletal system
+"LD26 Benign, uncertain or carcinoma in situ musculoskeletal"
+LD35 Fracture of radius or ulna or both
+LD36 Fracture of tibia or fibula or both
+LD37 Fracture of hand or foot bone or both
+LD37.00 Fracture phalanx hand
+LD37.01 Fracture phalanx foot
+LD38 Fracture of femur
+LD38.00 Fracture of neck of femur
+LD39 Other specified and unknown fracture
+LD39.00 Fracture nasal bones
+LD39.01 Fracture of clavicle
+LD39.02 Fracture of humerus
+LD39.03 Fracture of rib
+LD39.04 Fracture of vertebral column
+LD39.05 Fracture of pelvis
+LD39.06 Fracture of patella
+LD39.07 Fracture of skull
+LD45 Injury to multiple structures of knee
+LD45.00 Acute derangement of knee
+LD45.01 Rupture/sprain of cruciate ligaments of knee
+LD45.02 Sprain of lateral/medial collateral ligament of knee
+LD45.03 Tear of meniscus of knee
+LD46 Sprain or strain of ankle
+LD47 Other specified and unknown sprain or strain of joint
+LD47.00 Whiplash injury of neck
+LD48 Dislocation or subluxation
+LD48.00 Closed subluxation/open dislocation jaw
+LD48.01 Dislocation/subluxation acromioclavicular joint
+LD48.02 Dislocation/subluxation finger
+LD48.03 Dislocation/subluxation shoulder joint
+LD48.04 Subluxation radial head
+LD49 Other specified musculoskeletal injury
+LD49.00 Contusion of rib
+LD49.01 Tear musculus gastrocnemius
+LD55 Congenital anomaly of musculoskeletal system
+LD55.00 Cervical rib
+LD55.01 Congenital dislocation of hip/dysplasia
+LD55.02 Spina bifida occulta
+LD55.03 Talipes equinovarus
+LD65 Neck syndrome
+LD65.00 Cervical herniation of nucleus pulposus
+LD66 Back syndrome without radiating pain
+LD66.00 Spondylosis
+LD66.01 Spondylolysis/spondylolisthesis
+LD67 Back syndrome with radiating pain
+LD67.00 Lumbar or thoracic disc prolapse with radiculopathy
+LD68 Shoulder syndrome
+LD69 Patella disorder
+LD69.00 Retropatellar chondromalacia
+LD70 Acquired deformity of spine
+LD70.00 Scoliosis deformity of spine
+LD71 Acquired deformity of limb
+LD71.00 Acquired unequal limb length
+LD71.01 Hallux valgus
+LD71.02 Hammer toe
+LD71.03 Mallet finger
+LD71.04 Talipes (pes) planus
+"LD72 Other spec and unknown bursitis, tendinitis, synovitis"
+LD72.00 Acquired trigger finger
+LD72.01 Bursitis
+LD72.02 Calcaneus spur
+LD72.03 Dupuytren's contracture
+LD72.04 Medial epicondylitis of elbow joint
+LD72.05 Tendinitis/tenosynovitis
+LD73 Tennis elbow
+LD74 Rheumatoid arthritis and related conditions
+LD74.00 Ankylosing spondylitis (M. Bechterew/Bekhterev's disease)
+LD74.01 Rheumatoid arthritis
+LD75 Gout
+LD76 Polymyalgia rheumatica
+LD77 Osteochondrosis
+LD77.00 Legg-Calve-Perthes disease
+LD77.01 Osgood-Schlatter disease
+LD77.02 Osteochondritis dissecans
+LD77.03 Slipped upper femoral epiphysis
+LD78 Osteoarthrosis of hip
+LD79 Osteoarthrosis of knee
+LD80 Other specified and unknown osteoarthrosis
+LD81 Osteoporosis
+LD81.00 Osteopenia
+LD99 Other spec diagnoses and diseases of musculoskeletal system
+LD99.00 Hypermobility syndrome
+LD99.01 Instability knee
+LD99.02 Loose body in joint
+LD99.03 Nonunion of fracture (pseudoarthrosis)
+LD99.04 Old meniscus injury
+LD99.05 Psoriatic arthritis
+LD99.06 Tietze's disease
+LD99.07 Non-traumatic derangement of knee
+NS01 Headache
+"NS02 Pain, face"
+NS03 Restless legs
+"NS04 Tingling fingers, feet, toes"
+NS05 Sensation disturbances
+NS06 Convulsion or seizure
+NS06.00 Febrile seizures
+NS07 Abnormal involuntary movements
+"NS08 Disturbance of smell, taste or both"
+NS09 Vertigo or dizziness
+NS09.00 Lightheaded
+NS09.01 Rotatory vertigo
+NS10 Paralysis and weakness
+NS11 Speech problem
+NS11.00 Stammering
+NS90 Concern or fear of neurological disease
+"NS99 Other spec sympts, complts and abn findings of neurological system"
+ND01 Poliomyelitis
+ND01.00 Acute poliomyelitis
+"ND02 Meningitis, encephalitis or both"
+ND02.00 Bacterial meningitis
+ND02.01 Encephalitis
+ND02.02 Myelitis
+ND02.03 Viral meningitis
+ND03 Tetanus
+ND04 Other specified and unknown neurological infection
+ND04.00 Slow-virus infection
+ND25 Neoplasm nervous system
+ND25.00 Benign neoplasm nervous system
+ND25.01 Malignant neoplasm nervous system
+ND25.02 Neoplasm of uncertain behaviour nervous system
+ND35 Concussion
+ND36 Other specified and unknown head injury
+ND36.00 Cerebral contusion
+ND36.01 Epidural intracranial haematoma
+ND36.02 Traumatic intracranial haemorrhage
+ND36.03 Traumatic subdural intracranial haemorrhage
+ND37 Other specified and unknown injury neurological system
+ND55 Congenital anomaly of neurological system
+ND55.00 Congenital hydrocephalus
+ND55.01 Spina bifida
+ND65 Multiple sclerosis
+ND66 Parkinsonism
+ND66.00 Parkinson's disease
+ND67 Epilepsy
+ND68 Transient cerebral ischaemia
+ND69 Stroke or cerebrovascular accident
+ND69.00 Cerebral infarction
+ND69.01 Non traumatic intracranial haemorrhage
+ND69.02 Subarachnoid intracranial haemorrhage
+ND70 Cerebrovascular disease
+ND71 Migraine
+ND72 Cluster headache
+ND73 Tension headache
+ND74 Trigeminal neuralgia
+ND75 Facial paralysis
+ND76 Carpal tunnel syndrome
+"ND77 Peripheral neuritis, neuropathy or both"
+ND77.00 Common peroneal neuropathy
+ND77.01 Diabetic neuropathy
+ND77.02 Guillain-Barré syndrome
+ND77.03 Meralgia paresthetica
+ND77.04 Morton's neuroma
+ND77.05 Phantom pain
+ND77.06 Thoracic outlet syndrome
+ND99 Other spec and unknown diagnoses and diseases of neurological system
+ND99.00 Amyotrophic lateral sclerosis
+ND99.01 Combined disorder of muscle and peripheral nerve
+ND99.02 Myasthenia gravis
+ND99.03 Tic disorder
+PS01 Feeling anxious or nervous or tense
+PS02 Acute stress reaction
+PS03 Feeling sad
+PS04 Feeling or being irritable or angry
+PS05 Suicidal ideation
+PS06 Sleep disturbance
+PS07 Sexual desire and fulfilment problem
+PS07.00 Premature ejaculation
+PS07.01 Primary erectile dysfunction
+PS07.02 Vaginismus of psychogenic origin
+PS08 Gender incongruence problem
+PS09 Eating problem in child
+PS10 Bedwetting or enuresis
+PS11 Encopresis
+PS12 Chronic alcohol problem
+PS12.00 Alcohol dependence
+PS12.01 Alcohol withdrawal delirium
+PS12.02 Alcoholism
+PS12.03 Binge drinker
+PS12.04 Korsakoff's psychosis
+PS13 Acute alcohol intoxication
+PS14 Tobacco smoking problem
+PS15 Medication abuse
+PS16 Drug abuse
+PS16.00 Abuse or addiction hard drugs
+PS16.01 Abuse/addiction soft drugs
+PS17 Memory or attention problem
+PS18 Child behaviour symptom or complaint
+PS19 Adolescent behaviour symptom or complaint
+PS20 Specific learning problems
+PS20.00 Developmental disorder of motor function
+PS20.01 Developmental language disorder
+PS20.02 Developmental speech disorder
+PS20.03 Dyslexia
+PS21 Own illness problem
+PS21.00 Dependence on others
+PS22 Phase of life problem
+PS22.00 Empty-nest problem
+PS22.01 Retirement problem
+"PS90 Concern, fear of mental disorder or problem"
+PS99 Other spec psychological/mental sympt/complt/abn finding
+PSV.0 NO problem
+PSV.1 MILD/MODERATE problem
+PSV.2 SEVERE problem
+PSV.3 COMPLETE problem
+PSV.9 NOT applicable
+PD01 Dementia
+PD01.00 Alzheimer's disease
+PD01.01 Multi-infarct dementia
+PD02 Other specified and unknown organic mental disorder
+PD02.00 Delirium
+PD03 Schizophrenia
+PD04 Affective psychosis
+PD04.00 Bipolar disorder
+PD05 Other specified or unknown psychosis
+PD06 Anxiety disorder or anxiety state
+PD06.00 Generalised anxiety disorder
+PD06.01 Panic disorder
+PD06.02 Phobia
+PD07 Obsessive-compulsive or related disorder
+PD08 Adjustment disorders
+PD09 Post traumatic stress disorder
+PD10 Bodily distress or somatisation disorder
+PD11 Burn-out
+PD12 Depressive disorder
+PD12.00 Dysthymia
+PD12.01 Postpartum depression
+PD13 Mixed depressive and anxiety disorder
+PD14 Suicide or suicide attempt
+PD14.00 Suicide attempt
+PD14.01 Suicide
+PD15 Personality disorder
+PD15.00 Borderline personality disorder
+PD16 Attention deficit hyperactivity disorder
+PD17 Eating disorder
+PD17.00 Anorexia nervosa
+PD17.01 Bulimia
+PD18 Disorders of intellectual development
+PD19 Autism spectrum disorders
+PD19.00 Autistic disorder
+PD99 Other spec or unknown psychological or mental diagnoses or diseases
+PD99.00 Compulsive gambling
+RS01 Pain respiratory system
+RS02 Shortness of breath
+RS03 Wheezing
+RS04 Other specified breathing problem
+RS05 Snoring
+RS06 Sleep-related breathing problems
+RS06.00 Sleep apnoea
+RS07 Cough
+RS08 Nose bleed or epistaxis
+RS09 Sneezing or nasal congestion
+RS10 Nose symptoms or complaints
+RS11 Sinus symptoms or complaints
+RS12 Throat symptoms or complaints
+RS12.00 Pain in throat
+RS13 Voice symptoms or complaints
+RS14 Haemoptysis or coughing blood
+RS15 Abnormal sputum or phleg
+RS50 Pleurisy or pleural effusion
+RS90 Concern or fear of disease respiratory system
+RS91 Concern about appearance of nose
+"RS99 Other spec respiratory sympts, complts and abn findings"
+RS99.00 Hiccough
+RS99.01 Irritable airways
+RD01 Pertussis
+RD02 Acute upper respiratory infection
+RD02.00 Acute pharyngitis
+RD02.01 Common cold
+RD03 Acute or chronic rhinosinusitis
+RD03.00 Acute sinusitis
+RD03.01 Chronic sinusitis
+RD04 Acute tonsillitis
+RD04.00 Peritonsillar abscess
+RD04.01 Streptococcal throat
+RD05 Acute (obstructive) laryngitis or tracheitis or both
+RD05.00 Acute subglottis laryngitis
+RD06 Acute bronchitis or bronchiolitis or both
+RD07 Influenza
+RD08 Coronavirus disease 2019 (COVID-19)
+RD09 Pneumonia
+RD09.00 Legionella pneumonia
+RD10 Other specified or unknown respiratory infection
+RD10.00 Diphteria
+RD10.01 Epiglottitis
+RD10.02 Severe acute respiratory syndrome (SARS)
+RD25 Malignant neoplasm bronchus and lung
+RD26 Other spec or unknown respiratory malignant neoplasm
+RD26.00 Malignant neoplasm of larynx
+RD27 Benign neoplasm respiratory
+RD28 Uncertain or carcinoma in situ neopl of respiratory system
+RD35 Injury respiratory system
+"RD36 Foreign body in nose, larynx, bronchus"
+RD55 Congenital anomaly of respiratory system
+RD65 Allergic rhinitis
+RD66 Hypertrophy tonsils or adenoids or both
+RD67 Chronic bronchitis
+RD68 Chronic obstructive pulmonary disease and emphysema
+RD69 Asthma
+RD69.00 Allergic asthma
+RD70 Lung disease related to external agents
+RD70.00 Pneumoconiosis
+RD70.01 Vaping related disorder
+RD99 Other spec or unknown diagnoses and diseases of respiratory system
+RD99.00 Aspiration pneumonia
+RD99.01 Bronchiectasis
+RD99.02 Cystic fibrosis
+RD99.03 Deviated nasal septum
+RD99.04 Pneumothorax
+RD99.05 Polyp of nasal cavity
+RD99.06 Polyp of vocal cord
+RD99.07 Respiratory failure
+RD99.08 Interstitial lung disease
+SS01 Pain or tenderness of skin
+SS02 Pruritus
+SS03 Lump or swelling of skin localised
+SS04 Lump or swelling of skin generalised
+SS05 Rash localised
+SS06 Rash generalised
+SS07 Skin colour change
+SS07.00 Cyanosis
+SS08 Skin texture symptom or complaint
+SS08.00 Dry skin
+SS08.01 Induration of skin
+SS09 Nail symptom or complaint
+SS10 Hair loss or baldness
+SS11 Other specified hair or scalp symptom or complaint
+SS11.00 Change in hair colour
+SS11.01 Hirsutism
+SS90 Concern or fear of disease of skin
+"SS99 Other spec symptoms, complts and abn findings of skin"
+SD01 Warts
+SD02 Molluscum contagiosum
+SD03 Herpes zoster
+SD03.00 Herpes zoster
+SD03.01 Postherpetic neuralgia
+SD04 Herpes simplex
+SD04.00 Herpes (simplex) labialis
+SD05 Infected finger or toe
+SD05.00 Paronychia
+SD05.01 Pulp space infection of finger/thumb
+SD05.02 Pulp space infection of toe
+SD06 Boil or carbuncle
+SD06.00 Furuncle
+SD06.01 Furunculosis
+SD07 Post-traumatic skin infection
+SD08 Dermatophytosis
+SD08.00 Tinea pedis
+SD09 Pityriasis versicolor
+SD10 Onychomycosis
+SD11 Candidiasis skin
+SD11.00 Candida intertrigo
+SD11.01 Candidiasis of nails
+SD11.02 Diaper candidiasis
+SD12 Pityriasis rosea
+SD13 Scabies and other acariasis
+SD14 Pediculosis and other skin infestation
+SD14.00 Head lice
+SD14.01 Pediculosis pubis
+SD15 Impetigo
+SD16 Other specified or unknown skin infection
+SD16.00 Cellulitis
+SD16.01 Erysipelas
+SD16.02 Erythrasma
+SD16.05 Bacterial folliculitis
+SD25 Malignant neoplasm of skin
+SD25.00 Basal cell carcinoma of skin
+SD25.01 Kaposi's sarcoma of skin
+SD25.02 Malignant melanoma
+SD25.03 Squamous cell carcinoma of skin
+SD26 Lipoma
+SD27 Benign melanocytic naevus
+SD28 Haemangioma or lymphangioma
+"SD29 Benign, uncertain or carcinoma in situ neoplasms of skin"
+SD29.00 Dermatofibroma
+SD29.01 Dysplastic naevus
+SD29.02 Keratoacanthoma
+SD29.03 Granuloma telangiectaticum
+SD35 Bruise or contusion
+SD35.00 Subungual haematoma
+"SD36 Abrasion, scratch, blister"
+SD37 Laceration or cut
+SD38 Other specified or unknown skin injury
+SD38.00 Avulsion of fingernail
+SD38.01 Avulsion of toenail
+SD39 Insect bite or sting
+SD39.00 Tick bite
+SD40 Animal or human bite
+SD41 Burn or scald
+SD42 Foreign body in skin
+SD55 Congenital anomaly of skin
+SD55.00 Port-wine stain of skin
+SD55.01 Strawberry nevus of skin
+SD65 Corn or callosity
+SD66 Solar keratosis or sunburn
+SD66.00 Actinic keratosis
+SD66.01 Allergy to sunlight
+SD66.02 Idiopathic photodermatosis
+SD66.03 Photodermatitis
+SD67 Pilonidal cyst or fistula or both
+SD68 Seborrhoeic dermatitis
+SD68.00 Cradle cap
+SD68.01 Dandruff
+"SD69 Atopic eczema, dermatitis"
+SD70 Contact or allergic dermatitis
+SD70.00 Contact dermatitis
+SD70.01 Ingestion dermatitis due to drugs
+SD71 Diaper rash
+SD72 Psoriasis
+SD73 Sweat gland disease
+SD73.00 Anhidrosis
+SD73.01 Dyshidrotic eczema
+SD73.02 Hydradenitis
+SD74 Sebaceous cyst
+SD74.00 Atheroma cyst
+SD74.01 Epithelial cyst
+SD75 Ingrowing nail
+SD76 Acne
+SD76.00 Acne conglobata
+SD76.01 Acne vulgaris
+SD77 Chronic ulcer of skin
+SD77.00 Pressure sore
+SD77.01 Venous ulcer of leg
+SD77.02 Diabetic foot ulcer
+SD78 Urticaria
+SD80 Seborrhoeic keratosis
+SD81 Rosacea
+SD82 Alopecia
+SD82.00 Alopecia areata
+SD82.01 Androgenic alopecia
+SD99 Other spec or unknown diagnoses and diseases of skin
+SD99.00 Discoid lupus erythematosus
+SD99.01 Erythema nodosum
+SD99.02 Keloid
+SD99.03 Lichen planus
+SD99.04 Lichen sclerosus
+SD99.05 Onychogryphosis
+SD99.06 Striae atrophicae
+SD99.07 Vitiligo
+TS01 Excessive thirst
+TS02 Excessive appetite
+TS03 Loss of appetite
+TS04 Feeding problem of infant or child
+TS05 Feeding problem of adult
+TS06 Weight gain
+TS07 Weight loss
+TS08 Growth delay
+TS09 Dehydration
+TS50 Underweight
+TS51 Overweight
+"TS90 Concern or fear of disease of endocrine, metabolic and nutritional system"
+"TS99 Other spec endocrine, metabolic, nutritional sympts, complts, abn findings"
+TD01 Endocrine infection
+TD25 Malignant neoplasm of thyroid
+TD26 Benign neoplasm of thyroid
+TD27 Other endocrine neoplasm
+TD27.00 neopl of unknown or uncertain behaviour of endocrine system
+TD27.01 Other benign endocrine neoplasm of endocrine system
+TD27.02 Other malignant endocrine neoplasm of endocrine system
+TD55 Thyroglossal duct or cyst
+TD56 Congenital anomaly of endocrine or metabolic system
+TD65 Goitre
+TD66 Obesity
+TD68 Hyperthyroidism or thyrotoxicosis
+TD69 Hypothyroidism or myxoedema
+TD70 Hypoglycaemia
+TD71 Type 1 diabetes mellitus
+TD72 Type 2 diabetes mellitus
+TD73 Vitamin deficiency
+TD74 Mineral and nutritional deficiency
+TD74.00 Kwashiorkor
+TD74.01 Marasmus
+TD75 Lipid disorder
+TD75.00 Hypercholesterolaemia
+TD75.01 Hypertriglyceridaemia
+TD75.02 Mixed hyperlipidaemia
+TD75.03 Primary hypercholesterolaemia
+"TD99 Other spec or unknown endocrine, metabolic, nutritional diagnoses and diseases"
+TD99.00 Addison's disease
+TD99.01 Adrenocortical insufficiency
+TD99.02 Adrenogenital disorder
+TD99.03 Cushing's syndrome
+TD99.04 Hyperhomocysteinemia
+TD99.05 Lactose intolerance
+TD99.06 Polycystic ovary syndrome
+TD99.07 Porphyria
+TD99.08 Premature menopause
+TD99.09 Pubertas praecox
+TD99.10 Thyroiditis
+US01 Dysuria or painful urination or both
+US02 Urinary frequency or urgency
+US03 Urine incontinence
+US03.00 Genuine stress incontinence
+US03.01 Mixed incontinence
+US03.02 Urge incontinence
+US04 Urinary retention
+US05 Other specified urination problems
+US05.00 Anuria/oliguria
+US06 Haematuria
+US07 Other specified urine symptom or complaint
+US08 Other specified bladder symptom or complaint
+US09 Kidney symptom or complaint
+US09.00 Renal colic
+US10 Urethral discharge
+US50 Abnormal urine test
+US50.00 Orthostatic albuminuria
+US50.01 Glycosuria
+US50.02 Proteinuria
+US90 Concern or fear of disease of urinary system
+"US99 Other spec sympt, complt and abn finding of urinary system"
+UD01 Pyelonephritis or pyelitis
+UD02 Cystitis
+UD02.00 Acute cystitis (non-veneral)
+UD03 Urethritis and urethral syndrome
+UD04 Other specified or unknown urinary infection
+UD04.00 Urinary tract infection NOS
+UD25 Malignant neoplasm of kidney
+UD26 Malignant neoplasm of bladder
+UD27 Other spec and unknown malignant neoplasm urinary tract
+UD28 Benign neoplasm of urinary tract
+UD29 Uncertain or carcinoma in situ neopl of urinary system
+UD29.00 Polyp urine bladder
+UD35 Injury to urinary tract
+UD35.00 Contusion of kidney
+UD35.01 Foreign body urinary tract
+UD55 Congenital anomaly of urinary system
+UD55.00 Congenital (poly)cystic kidney disease
+UD65 Nephrosis
+UD66 Chronic kidney disease
+UD66.00 Chronic renal insufficiency
+UD67 Urinary calculus
+UD99 Other spec or unknown diagnoses and diseases of urinary tract
+UD99.00 Contracted kidney
+UD99.01 Obstructive vesicoureteric reflux
+UD99.02 Urethral stricture
+WS01 Suspicion of pregnancy
+WS02 Pregnancy vomiting and nausea
+WS02.00 Hyperemesis gravidarum
+WS03 Bleeding first 20 weeks of pregnancy
+WS03.00 Bleeding first trimester
+WS04 Antepartum haemorrhage
+WS04.00 Bleeding second/third trimester
+WS05 Post-partum bleeding
+WS06 Breast or lactation symptom or complaint
+WS06.00 Lactation problem
+WS39 Other specified post-partum symptom or complaint
+WS39.00 Abnormal lochia
+WS50 Abnormal findings on antenatal screening of mother
+WS90 Concern or fear of being pregnant
+WS91 Fear about complications of pregnancy
+"WS99 Other spec sympts, complts and abn findings during pregnancy, delivery and puerperium"
+WS99.00 Feeling fewer movements of foetus
+WS99.01 Pelvic instability
+WD01 Puerperal infection or sepsis
+WD01.00 Infection of perineal wound
+WD01.01 Puerperal endometritis
+"WD02 Other spec and unknown infection complicating pregnancy, delivery and puerperium"
+WD02.00 Genitourinary tract infection in pregnancy
+WD03 Puerperal mastitis
+WD25 Malignant neoplasms related to pregnancy
+"WD26 Benign, in situ or uncertain neopls related to pregnancy"
+WD35 Injury complicating pregnancy
+WD55 Congenital anomaly complicating pregnancy
+WD65 Spontaneous abortion
+WD65.00 Habitual abortion
+WD66 Induced abortion
+WD67 Pregnancy
+WD68 Unwanted pregnancy
+WD69 Ectopic pregnancy
+WD70 Pre-eclampsia or eclampsia
+WD70.00 Hemolysis-elevated liver enzymes-low platelet count syndrome
+"WD70.01 Pregnancy-induced hypertension complicating pregnancy, childbirth or the puerperium"
+WD70.02 Toxaemia/(pre) eclampsia
+"WD71 Pregnancy, high risk"
+WD71.00 Abnormal foetal presentation
+WD71.01 Cervical insufficiency/incompetence
+WD71.02 Foetal-maternal disproportion
+WD71.03 Foetal growth retardation
+WD71.04 Pre-existing diabetes mellitus in pregnancy
+WD71.05 Pre-existing hypertension in pregnancy
+WD71.06 Rhesus antibody present
+WD72 Gestational diabetes
+"WD80 Uncomplicated labour, delivery livebirth"
+"WD81 Uncomplicated labour, delivery stillbirth"
+"WD82 Complicated labour, delivery livebirth"
+WD82.00 Caesarean section of livebirth
+WD82.01 Delivery by vacuum extraction of livebirth
+WD82.02 Forceps delivery of livebirth
+"WD83 Complicated labour, delivery stillbirth"
+WD83.00 Caesarean section of stillbirth
+WD83.01 Delivery by vacuum extraction of stillbirth
+WD83.02 Forceps delivery of stillbirth
+WD84 Other spec and unknown breast disorder in pregnancy or puerperium
+WD84.00 Cracked nipple
+WD85 Other specified complications of puerperium
+WD85.00 Haemorrhoids in puerperium
+WD85.01 Sub-involution of uterus
+WD85.02 Thrombosis complicating pregnancy AND/OR puerperium
+"WD99 Other spec and unknown diagnoses and diseases or health conditions in pregnancy, delivery and puerperium"
+WD99.00 False labour
+WD99.01 Prolonged pregnancy
+WD99.02 Deep venous thrombosis in pregnancy
+WD99.03 Heamorrhoids in pregnancy
+WD99.04 Varicose veins in pregnancy
+ZC01 Partner relationship problem
+ZC02 Child relationship problem
+ZC02.00 Neglected child
+ZC03 Parent or family member relationship problem
+ZC04 Health care provider relationship problem
+ZC09 Other specified relationship problem
+ZC09.00 Neighbours quarrel/noise
+ZC10 Loss or death of partner problem
+ZC10.00 Divorce from partner
+ZC10.01 Death of partner
+ZC11 Loss or death of child problem
+ZC12 Loss or death of parent or family member problem
+ZC13 Problems associated with finances
+ZC15 Education problem
+ZC15.00 Illiteracy
+ZC15.01 Failed exams
+ZC15.02 Poor educational progress
+ZC16 Work problem
+ZC16.00 Discord in workplace
+ZC16.01 Occupational exposure to toxic agents
+ZC16.02 Occupational noise exposure
+ZC16.03 Stressful work schedule
+ZC16.04 Threat of dismissal
+ZC17 Unemployment problem
+ZC20 Food or water problem
+ZC25 Illness of partner problem
+ZC26 Illness of child problem
+ZC27 Illness of parents or family member problem
+ZC30 Partner's behaviour problem
+ZC30.00 Addiction of partner
+ZC30.01 Aggressive behaviour of partner
+ZC30.02 Infidelity of partner
+ZC31 Parent or family behaviour problem
+ZC31.00 Addiction of parent or family
+ZC31.01 Aggression of parent or family
+ZC35 Violence problem
+ZC35.00 Maltreatment/sexual abuse child
+ZC35.01 Maltreatment or sexual abuse by partner
+ZC35.02 Problems related to assault or rape
+ZC36 Housing problem
+ZC36.00 Homeless
+ZC36.01 Housing unsuited to needs
+ZC37 Legal problem
+ZC37.00 Imprisonment
+ZC37.01 Problems with guardianship
+ZC38 Social welfare problem
+ZC38.00 Sickness and disability law problem
+ZC38.01 Social assistance law problem
+ZC39 Health care system related problem
+ZC39.00 Person awaiting admission to elderly/nursing home
+ZC39.01 Waiting period for investigation and treatment
+ZC90 Concern or fear of having a social problem
+ZC99 Other spec social problems influencing health status
+"ZC99.00 Discrimination race, religion or gender"
+ZC99.01 Feeling lonely
+ZC99.02 Problem illegal stay
