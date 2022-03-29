@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'pastel'
+require 'rainbow'
 require 'typhoeus'
 
 # Contains methods for fetching data from www.icpc-3.info
@@ -47,10 +47,9 @@ module ICPCFetch
   end
 
   def recursive_bar(progress_size, progress)
-    pastel = Pastel.new
-    string = (pastel.green.inverse('-') * ((progress - 1).negative? ? 0 : progress)).to_s
-    string += pastel.yellow.inverse('>')
-    string + "#{pastel.on_red(' ') * (progress_size - (progress + 1))} \n"
+    string = (Rainbow('-').green.inverse * ((progress - 1).negative? ? 0 : progress)).to_s
+    string += Rainbow('>').yellow.inverse
+    string + "#{Rainbow(' ').red.inverse * (progress_size - (progress + 1))} \n"
   end
 
   def recursive_info(id, depth, progress_size, progress)

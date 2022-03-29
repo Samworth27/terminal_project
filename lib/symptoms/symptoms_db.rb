@@ -1,11 +1,11 @@
-# frozen_string_literal: true
+# frozen_literal_string: true
 
-require 'json'
-require 'pastel'
+require 'tty-prompt'
 
 
 require_relative './symptoms_database/db_build'
 require_relative './symptoms_database/db_calls'
+require_relative '../app_errors'
 
 # Api Reference
 # https://www.icpc-3.info/documents/extra/API-Calls.pdf
@@ -16,10 +16,18 @@ class SymptomsDatabase
   include DBBuild
   include DBCalls
 
+  
+
   # No need for any arguments
   def initialize
     @size = 0
     @storage = PStore.new('./db/storage.pstore')
+    
+
+
+    
+    fetch_data if prompt?(main: 'Fetch new data?',help: 'Fetches data from the internet. May take a few minutes')
+    reload_database if prompt?(main: 'Update database from local JSON file', help: 'May take up to 20 seconds to complete')
   end
 
   def to_s
@@ -35,5 +43,16 @@ class SymptomsDatabase
     json = JSON.parse(json, symbolize_names: true)
     build(json[0])
     print `clear`
+  end
+
+  def prompt?(main:, help: '')
+    prompt = TTY::Prompt.new
+    print `clear`
+    prompt.select(
+      main,
+      [{value: false, name:'no'},{value: true, name: 'yes'}],
+      help: help,
+      show_help: :always
+    )
   end
 end

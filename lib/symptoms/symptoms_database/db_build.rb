@@ -2,7 +2,6 @@
 
 require 'pstore'
 require 'tty-progressbar'
-require 'pastel'
 
 require_relative './icpc_fetch/icpc_fetch'
 # Functions required to build database
@@ -23,19 +22,18 @@ module DBBuild
   end
 
   def format_progressbar(size)
-    pastel = Pastel.new
     {
       total: size,
       width: 60,
       clear: true,
-      incomplete: pastel.on_red(' '),
-      complete: pastel.green.inverse('-'),
-      head: pastel.yellow.inverse('>')
+      incomplete: Rainbow(' ').red.inverse,
+      complete: Rainbow('-').green.inverse,
+      head: Rainbow('>').yellow.inverse
     }
   end
 
   def format_item(content, parent)
-    content[:children] = content[:children].map { |i| i[:id] } unless content[:children] == false
+    content[:children] = content[:children].map! { |i| i[:id] } unless content[:children] == false
     content.delete(:state)
     content[:code], content[:text] = split_text(content[:text])
     content[:parent] = parent
@@ -43,6 +41,7 @@ module DBBuild
 
   def store_item(content)
     @storage.transaction do
+      # content[:children].map! { |child| @storage[child] } unless content[:children] == false
       @storage[content[:id]] = content
       @storage[content[:code]] = @storage[content[:id]]
       @storage[:size] = @size
