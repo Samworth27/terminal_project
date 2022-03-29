@@ -1,5 +1,6 @@
 require_relative './symptoms_database/db_build'
 require_relative './symptoms_database/db_calls'
+require_relative '../app_errors'
 
 # Api Reference
 # https://www.icpc-3.info/documents/extra/API-Calls.pdf
