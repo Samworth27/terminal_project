@@ -1,4 +1,4 @@
-require './src/item'
+require './lib/triage/queue_object/item'
 
 describe Item do
   let(:test_item) { Item.new({fname: 'John', lname: 'Smith'})}

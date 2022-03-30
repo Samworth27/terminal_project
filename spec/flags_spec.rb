@@ -1,4 +1,4 @@
-require './src/flags'
+require './lib/triage/flags'
 
 describe 'Flag' do
   let (:test_flags) do
@@ -15,7 +15,7 @@ describe 'Flag' do
   describe '#Class' do
     describe 'initilises correctly' do
       it 'stores flag values once in a class instance variable' do
-        test = Flags.new
+        test = Flags.new('testing')
         expect(test.class.flags).to eq(test_flags)
       end
       it 'will not overwrite class instance variable `flags' do
@@ -32,7 +32,7 @@ describe 'Flag' do
         test = Flags.new
         test.class.flags = {nothing: 0}
         expect(test.class.flags).to eq({nothing: 0})
-        # Need to rest flags or other tests will fail
+        # Need to reset flags or other tests will fail
         test.class.flags = test_flags
       end
     end
