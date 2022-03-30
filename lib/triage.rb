@@ -8,7 +8,7 @@ else
 end
 
 symptoms = Symptoms.new(access)
-flags = Flags.new(Symptoms.new(access).codes)
+flags = Flags.new(symptoms.codes)
 
 
 # puts symptoms.browse
