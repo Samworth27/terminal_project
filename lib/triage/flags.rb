@@ -107,10 +107,6 @@ class Flags
     symptoms = Symptoms.new(:user)
     prompt = TTY::Prompt.new
     loop do
-      print `clear`
-      puts "flags: #{self.to_s} => #{self.to_i} \n"
-      # puts "flag to set. #{flags_object.class.flags.keys.map{|i| i.to_s}} or [exit] to finish inputing"
-      # print '> '
       flag = symptoms.get_code
       return active_flags if flag == :exit
       set_to = prompt.select(
