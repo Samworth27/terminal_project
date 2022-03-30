@@ -1,4 +1,4 @@
-require_relative './src/flags'
+require_relative './lib/triage/flags'
 
 Flags.new(['chest pain', 'fracture', 'hemorrhage','unconsciouse'])
 

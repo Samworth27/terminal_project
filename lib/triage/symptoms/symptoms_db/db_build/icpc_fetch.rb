@@ -7,13 +7,8 @@ require 'typhoeus'
 # Contains methods for fetching data from www.icpc-3.info
 module ICPCFetch
   def fetch_data
-    # @hydra = Typhoeus::Hydra.new
     raw = return_all_children('nil')
-    # @hydra.run
-    # object = File.open('./symptoms/ruby.txt', 'w')
-    # object.write raw
-    # object.close
-    json = File.open('./symptoms/symptoms.json', 'w')
+    json = File.open('./db/.cached/symptoms.json', 'w')
     json.write JSON.pretty_generate(raw)
     json.close
   rescue Interrupt => _e

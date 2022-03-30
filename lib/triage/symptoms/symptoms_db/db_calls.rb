@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
+# Load all children
+Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
+
+
 require 'pstore'
 require 'rainbow'
+require 'tty-table'
+
 require_relative '../../app_errors'
 
 # Contains calls for pstore database
@@ -13,7 +19,7 @@ module DBCalls
     case child[:type]
     when 'chapter', 'component', 'subComponent', 'regionalChapter', 'regionalComponent', 'extensionComponent', 'extension', 'attribute'
       name = Rainbow(text).indianred
-    when 'contactReason', 'context', 
+    when 'contactReason', 'context'
       name = Rainbow(text).green
     when 'trauma', 'neoplasm', 'infection', 'otherDiagnosis', 'congenital', 'clinicalFinding', 'category'
       name = Rainbow(text).magenta
@@ -32,17 +38,17 @@ module DBCalls
   def pretty(content)
     
     content[:children] = (content[:children].is_a? Array) ? (content[:children].map { |i| colour_child(i)}) : []
-    content[:string] = 
-    "
-    Code:         #{content[:code]}
-    Description:  #{content[:text]}
-    "
+    content[:string] = TTY::Table.new([
+      ['Code  ', '  '+content[:code]],
+      :separator,
+      ['Description  ', '  '+content[:text]]
+      ])
     content
   end
 
   def fetch_parent(input)
     fetch_by_id(input)[:parent]
-  end
+  end 
 
   def fetch_pretty(input)
     return pretty(fetch_by_id(input)) if valid?(input)

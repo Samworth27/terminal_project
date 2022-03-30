@@ -14,3 +14,5 @@ gem 'rainbow'
 
 gem 'typhoeus'
 gem "tty-screen", "~> 0.8.1"
+
+gem "tty-table", "~> 0.12.0"
