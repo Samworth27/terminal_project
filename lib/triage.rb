@@ -8,7 +8,10 @@ else
 end
 
 symptoms = Symptoms.new(access)
+flags = Flags.new(Symptoms.new(access).codes)
+
 
 # puts symptoms.browse
-puts symptoms.get_code
+# puts symptoms.get_code
+puts  flags.set_flags
 
