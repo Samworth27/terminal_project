@@ -100,7 +100,12 @@ module ICPCFetch
     else
       [content, count]
     end
-    # p content[0]
-    # content[0][:id] == '#' ? (content[0][:size] = count) : [content, count]
   end
+
+  def fetch_search(terms)
+    puts "Fetching search results for '#{terms}'"
+    content = Typhoeus.get('https://browser.icpc-3.info/browse.php', params: { operation: 'search1', str: terms })
+    content = JSON.parse(content.response_body, symbolize_names: true)
+  end
+
 end

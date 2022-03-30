@@ -20,15 +20,15 @@ module DBBRowse
         # End of branch options
         choices = [
           {value: 'select', name: 'Select option'},
-          {value: 'ruberic', name: 'Fetch ruberic', disabled: '(Feature not complete)'},
+          {value: 'rubric', name: 'Fetch rubric', disabled: '(Feature not complete)'},
           {value: 'return', name: 'Return to search'}
         ]
         case prompt.select("Choose an option", choices)
       
         when 'select'
-          return display
-        when 'ruberic'
-          puts 'Fetching ruberic'
+          return display[:code]
+        when 'rubric'
+          puts 'Fetching rubric'
           prompt.keypress("Press any key to continue")
           print `clear`
         else

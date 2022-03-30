@@ -8,7 +8,6 @@ require 'pstore'
 require 'rainbow'
 require 'tty-table'
 
-require_relative '../../app_errors'
 
 # Contains calls for pstore database
 module DBCalls
@@ -36,7 +35,6 @@ module DBCalls
   end
 
   def pretty(content)
-    
     content[:children] = (content[:children].is_a? Array) ? (content[:children].map { |i| colour_child(i)}) : []
     content[:string] = TTY::Table.new([
       ['Code  ', '  '+content[:code]],

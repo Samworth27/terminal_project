@@ -5,8 +5,6 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 
 require 'tty-prompt'
 
-require_relative '../app_errors'
-
 # Api Reference
 # https://www.icpc-3.info/documents/extra/API-Calls.pdf
 
@@ -16,14 +14,17 @@ class Symptoms
   include DBBuild
   include DBCalls
   include DBBRowse
+  include SymptomSearch
 
   
 
   # No need for any arguments
-  def initialize
+  def initialize(access)
     @storage = PStore.new('./db/storage.pstore')
-    fetch_data if prompt?(main: 'Fetch new data?',help: 'Fetches data from the internet. May take a few minutes')
-    reload_database if prompt?(main: 'Update database from local JSON file', help: 'May take up to 20 seconds to complete')
+    if access == :admin
+      fetch_data if prompt?(main: 'Fetch new data?',help: 'Fetches data from the internet. May take a few minutes')
+      reload_database if prompt?(main: 'Update database from local JSON file', help: 'May take up to 20 seconds to complete')
+    end
   end
 
   def to_s
@@ -38,6 +39,21 @@ class Symptoms
       return @storage[:codes]
     end
   end
+
+  def get_code
+    prompt = TTY::Prompt.new
+    print `clear`
+    case prompt.select('How would you like to enter a code?', [{value: :browse, name: 'Browse'},{value: :search, name: 'Search'},{value: :cancel, name: 'Go Back'}])
+    when :browse
+      return browse
+    when :search
+      return search
+    else
+      return :cancel
+    end
+  end
+
+  private
 
   def reload_database
     json = File.open('./db/.cached/symptoms.json')

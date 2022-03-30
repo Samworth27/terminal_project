@@ -1,6 +1,14 @@
 # Load all children
 Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
 
-symptoms = Symptoms.new
-puts symptoms.browse
-puts symptoms
+if ARGV.include?('--admin')
+  access = :admin
+else
+  access = :user
+end
+
+symptoms = Symptoms.new(access)
+
+# puts symptoms.browse
+puts symptoms.get_code
+
