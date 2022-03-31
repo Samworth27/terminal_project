@@ -31,6 +31,7 @@ class Symptoms
     @storage.transaction do
       "Database containing #{@storage[:size]} items"
     end
+    
   end
 
   def codes  

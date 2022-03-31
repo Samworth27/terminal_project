@@ -12,8 +12,8 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 class Flags
   @flags = {}
 
-  def initialize(flag_names = '')
-    @value = 0b0000000
+  def initialize(value, flag_names = '')
+    @value = value
 
     # Populate 8 flags for testing
     if flag_names == 'testing'
@@ -45,7 +45,6 @@ class Flags
   def create_method(name, value)
     # Returns true if the flag `name` is on
     define_singleton_method(name) do
-      # puts "@value: #{@value} \n value: #{value}"
       flag_active(@value, value)
     end
 
@@ -100,7 +99,7 @@ class Flags
   end
 
   def active_flags
-    self.class.flags.filter {|k, v| flag_active(@value,v)}.keys
+    return self.class.flags.filter {|k, v| flag_active(@value,v)}.keys
   end
 
   def set_flags
@@ -108,7 +107,7 @@ class Flags
     prompt = TTY::Prompt.new
     loop do
       flag = symptoms.get_code
-      return active_flags if flag == :exit
+      return @value if flag == :exit
       set_to = prompt.select(
         "Currently '#{flag?(flag_value(flag))}' set to [true/ false]",
         [{value: true, name: 'True'},{value: false, name: "False"}])
