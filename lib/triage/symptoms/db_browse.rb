@@ -48,7 +48,7 @@ module DBBRowse
       input = prompt.select("Choose an item, return to the previous item, restart or exit",choices, filter: true, per_page:(TTY::Screen.height-6)) unless input == 'parent'
 
       input = display[:parent] if input == 'parent'
-      break if input == 'exit'
+      return :exit if input == 'exit'
 
       print `clear`
       display = fetch_pretty(input)

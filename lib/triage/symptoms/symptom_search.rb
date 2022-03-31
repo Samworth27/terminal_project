@@ -40,7 +40,7 @@ module SymptomSearch
       options = prompt.select("Choose an item, return to the previous item, restart or exit",choices, filter: true, per_page:(TTY::Screen.height-6))
       case options
       when 'exit'
-        return nil
+        return :exit
       when 'search'
         return search
       else

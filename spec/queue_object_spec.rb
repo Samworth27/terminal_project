@@ -1,5 +1,5 @@
-require './queue_object'
-require './item'
+require './lib/triage/queue_object'
+
 
 # Testing for QueueObject
 describe QueueObject do
