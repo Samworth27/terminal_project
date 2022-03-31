@@ -8,7 +8,8 @@ else
 end
 
 symptoms = Symptoms.new(access)
-
+Flags.new(0,symptoms.codes)
 # puts symptoms.browse
-puts symptoms.get_code
-
+# puts symptoms.get_code
+item = Item.new({fname: 'John', lname:'Smith'}, symptoms)
+puts item

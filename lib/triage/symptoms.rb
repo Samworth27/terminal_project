@@ -49,7 +49,7 @@ class Symptoms
     when :search
       return search
     else
-      return :cancel
+      return :exit
     end
   end
 

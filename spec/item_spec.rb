@@ -46,4 +46,8 @@ describe Item do
   describe '#modify' do
     it 'can modify item variable'
   end
+
+  descrive '#archive' do
+    it 'can archive item'
+  end
 end
