@@ -11,25 +11,29 @@ end
 class QueueObject
   attr_reader :name, :description, :queue
 
-  def initialize(name, description)
+  def initialize(name, description, database)
     @name = name
     @description = description
-    @queue = {}
+    @queue = []
+    @database = database
+    Flags.new(0,@database.codes)
   end
 
   def exist?
     true
   end
 
-  def add_item(item)
-    raise(InvalidInput, "inputted #{item.class} not Item") if item.class != Item
+  def queue
+    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item}\n"}
+  end
 
-    @queue[item.id] = item
+  def add_item
+    @queue.append(Item.new(@database))
   end
 
   def view_item(id)
-    raise(InvalidInput, "inputeed #{id.class} not Integer") if id.class != Integer
+    raise(InvalidInput, "inputed #{id.class} not Integer") if id.class != Integer
 
-    @queue[id]
+    @queue.select { |item| item[:id] = id}
   end
 end
