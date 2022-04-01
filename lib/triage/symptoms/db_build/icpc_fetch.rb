@@ -12,7 +12,7 @@ module ICPCFetch
     json.write JSON.pretty_generate(raw)
     json.close
   rescue Interrupt => _e
-    print `clear`
+    clear_screen
     puts 'Fetching new data cancelled'
   end
 
@@ -60,8 +60,6 @@ module ICPCFetch
   def count_children(content)
     total = content.size
     true_values = content.filter { |item| item[:children] == true }.size
-    # puts total - true_values
-    # sleep 1
     false_values = total - true_values
     [true_values, false_values]
   end
@@ -71,7 +69,6 @@ module ICPCFetch
       [root_content, 1, 0]
     else
       content = fetch_json(id, depth)
-      # puts "in pfetch_data #{count_children(content)}"
       progress_size, count = count_children(content)
       [content, progress_size, count]
     end
@@ -89,7 +86,7 @@ module ICPCFetch
     content, progress_size, count2 = pfetch_data(id, depth)
     count += count2
     content.filter { |item| item[:children] == true }.each_with_index do |item, i|
-      print `clear`
+      clear_screen
       item[:children], count = return_children_display([id, item[:id]], depth, [progress_size, i], string,
                                                        count)
     end

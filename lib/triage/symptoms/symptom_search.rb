@@ -7,18 +7,6 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 module SymptomSearch
   def search
     prompt = TTY::Prompt.new(active_color: :inverse)
-    # mock_input = {
-    #   id:0, 
-    #   text: "Search results for 'common cold'",
-    #   code: 'search', 
-    #   state:{opened: true},
-    #   type: "search results",
-    #   children:[
-    #     {id:4000565, text:"RD02 Acute upper respiratory infection", state: nil,type: "infection",children:false},
-    #     {id:104001442,text:"RD02.01 Common cold",state:nil,type:"infection",children:false}
-    #     ]
-    #   }
-    # mock_input[:children].map! { |child| child[:id]}
 
     ### Display Search Results
     input = fetch_search(prompt.ask("Enter search term > "))
@@ -27,7 +15,7 @@ module SymptomSearch
 
     loop do
       display = pretty(input.clone)
-      print `clear`
+      clear_screen
       puts display[:string].render(:unicode, resize: true, height: 6, alignments: [:right, :left],column_widths: [15,TTY::Screen.width-15])
       
       choices = display[:children]
@@ -45,7 +33,7 @@ module SymptomSearch
         return search
       else
         display = fetch_pretty(options)
-        print `clear`
+        clear_screen
         puts display[:string].render(:unicode, resize: true, height: 6, alignments: [:right, :left],column_widths: [15,TTY::Screen.width-15])
         if display[:children].size.zero?
           # End of branch options
@@ -61,7 +49,7 @@ module SymptomSearch
           when 'rubric'
             puts 'Fetching rubric'
             prompt.keypress("Press any key to continue")
-            print `clear`
+            clear_screen
             redo
           else
             redo

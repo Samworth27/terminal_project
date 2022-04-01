@@ -44,12 +44,12 @@ class SymptomsDatabase
     json = json.read
     json = JSON.parse(json, symbolize_names: true)
     build(json[0])
-    print `clear`
+    clear_screen
   end
 
   def prompt?(main:, help: '')
     prompt = TTY::Prompt.new
-    print `clear`
+    clear_screen
     prompt.select(
       main,
       [{value: false, name:'no'},{value: true, name: 'yes'}],

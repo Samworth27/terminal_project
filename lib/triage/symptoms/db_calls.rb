@@ -80,8 +80,6 @@ module DBCalls
     # Check for valid input
     @storage.transaction(true) do
       content =  @storage.fetch(id)
-      # content[:children].map! { |child| child[:id] } unless content[:children] == false
-      # content
     rescue PStore::Error => e
       raise PStore::Error, "fetch_by_id(#{id}) failed"
     end

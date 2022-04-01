@@ -11,7 +11,7 @@ require 'tty-screen'
 module DBBRowse
   def browse
     prompt = TTY::Prompt.new(active_color: :inverse)
-    print `clear`
+    clear_screen
     display = fetch_pretty('root')
     puts display[:string].render(:unicode, resize: true, height: 6, alignments: [:right, :left], column_widths: [15,TTY::Screen.width-15])
 
@@ -30,7 +30,7 @@ module DBBRowse
         when 'rubric'
           puts 'Fetching rubric'
           prompt.keypress("Press any key to continue")
-          print `clear`
+          clear_screen
         else
           input = 'parent'
         end
@@ -50,13 +50,10 @@ module DBBRowse
       input = display[:parent] if input == 'parent'
       return :exit if input == 'exit'
 
-      print `clear`
+      clear_screen
       display = fetch_pretty(input)
       
-      # box = TTY::Box.frame(width: TTY::Screen.width, height: 6) do
       puts display[:string].render(:unicode, resize: true, height: 6, alignments: [:right, :left],column_widths: [15,TTY::Screen.width-15])
-      # end
-      # print box
     end
   end
 end

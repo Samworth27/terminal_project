@@ -5,18 +5,6 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 
 require 'time'
 
-# # Defines function for inbuilt instance counter
-# module InstanceCounter
-#   # Inbuilt Counter
-#   def self.count
-#     @count
-#   end
-
-#   def self.count=(value)
-#     @count = value
-#   end
-# end
-
 # Item Class
 class Item
 
@@ -26,8 +14,10 @@ class Item
 
   def initialize(database, test=nil)
     @id = self.class.count
-    @database = @database
+    @database = database
     self.class.count += 1
+    @flags = 0b00000000
+    @notes = []
     if test.nil?
       @personal = Person.new
       modify(@database)
@@ -46,7 +36,7 @@ class Item
     prompt = TTY::Prompt.new
     # Prompt user for what they want to modify
     loop do
-      print `clear`
+      clear_screen
       unless @priority == nil
         case prompt.select('What do you want to do?',[{value: :flags, name:"Symptoms & Diagnosis (ICPC)"},{value: :notes, name: "Add notes"}, {value: :priority, name: 'Set Priority'},{value: :cancel,name: "Complete"}])
         when :flags
@@ -56,7 +46,6 @@ class Item
         when :priority
           set_priority
         when :cancel
-          puts 'item created'
           break
         end
       else
@@ -65,12 +54,23 @@ class Item
     end
   end
 
+  def days_ago(date)
+    case diff = Time.new.to_date.jd - date.to_date.jd
+    when 0
+      'today'
+    when 1
+      'yesterday'
+    else
+      "#{diff} days ago"
+    end
+  end
+
   def to_s
-    fname, lname = @personal[:name].values
+    fname, lname = @personal.name.values
     ["Surname, First Name: #{lname}, #{fname}",
     "ID: #{@id}",
     "Priority: #{@priority}",
-    # "Flags-Raw: #{@flags}",
+    "Time Presented: #{days_ago(@time_presented)} @ #{@time_presented.strftime("%H%M")}",
     'Symptoms/ Diagnosis:',
     Flags.new(@flags).active_flags.map { |item| "\t #{@database.fetch_name(item)}"},
     'Notes: ',
