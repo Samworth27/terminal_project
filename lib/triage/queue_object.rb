@@ -11,25 +11,49 @@ end
 class QueueObject
   attr_reader :name, :description, :queue
 
-  def initialize(name, description)
+  def initialize(name, description, database)
     @name = name
     @description = description
-    @queue = {}
+    @queue = []
+    @database = database
+    Flags.new(0,@database.codes)
   end
 
   def exist?
     true
   end
 
-  def add_item(item)
-    raise(InvalidInput, "inputted #{item.class} not Item") if item.class != Item
+  def queue
+    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item}\n"}
+  end
 
-    @queue[item.id] = item
+  def queue_test
+    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item.to_s_test}\n"}
+  end
+
+  def add_item
+    @queue.append(Item.new(@database))
+  end
+
+  def add_item_test(pri)
+    item = Item.new(@database, pri)
+    begin
+      @queue.insert(@queue.find_index{|x| x.priority>pri},item)
+    rescue
+      @queue.append(item)
+    end
   end
 
   def view_item(id)
-    raise(InvalidInput, "inputeed #{id.class} not Integer") if id.class != Integer
+    raise(InvalidInput, "inputed #{id.class} not Integer") if id.class != Integer
+    @queue.select { |item| item[:id] = id}
+  end
 
-    @queue[id]
+  def next_item
+    @queue.shift
+  end
+
+  def next_item_test
+    @queue.size > 0 ? @queue.shift.to_s_test : 'No items in queue'
   end
 end

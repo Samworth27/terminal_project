@@ -19,22 +19,22 @@ require 'time'
 
 # Item Class
 class Item
+
   @count = 0
-  attr_reader :id, :fname, :lname, :flags, :time_presented
+  attr_reader :id, :personal, :flags, :time_presented
   attr_accessor :notes, :priority
 
-  def initialize(name, database)
+  def initialize(database, test=nil)
     @id = self.class.count
+    @database = @database
     self.class.count += 1
-    @fname = name[:fname]
-    @lname = name[:lname]
+    if test.nil?
+      @personal = Person.new
+      modify(@database)
+    else
+      @priority = test
+    end
     @time_presented = Time.new
-    @flags = 0
-    @notes = []
-    @priority = nil
-    @database = database
-    modify(@database)
-    # puts "Item init with id #{@id} @ #{@time_presented}"
   end
 
   def set_priority
@@ -66,15 +66,19 @@ class Item
   end
 
   def to_s
-    print `clear`
-    ["First Name: #{@fname}",
-    "Surname: #{@lname}",
+    fname, lname = @personal[:name].values
+    ["Surname, First Name: #{lname}, #{fname}",
+    "ID: #{@id}",
     "Priority: #{@priority}",
     # "Flags-Raw: #{@flags}",
     'Symptoms/ Diagnosis:',
     Flags.new(@flags).active_flags.map { |item| "\t #{@database.fetch_name(item)}"},
     'Notes: ',
     notes_to_s].join("\n")
+  end
+
+  def to_s_test
+    "ID: #{@id}\n Priority: #{@priority}\n Time presented: #{@time_presented}"
   end
 
   def notes_to_s
