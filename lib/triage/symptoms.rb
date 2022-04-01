@@ -18,7 +18,8 @@ class Symptoms
 
   
 
-  # No need for any arguments
+  # @param access[Symbol] Used to allow used to rebuild database
+  # @todo password protect admin 
   def initialize(access)
     @storage = PStore.new('./db/storage.pstore')
     if access == :admin
@@ -42,7 +43,7 @@ class Symptoms
 
   def get_code
     prompt = TTY::Prompt.new
-    print `clear`
+    clear_screen
     case prompt.select('How would you like to enter a code?', [{value: :browse, name: 'Browse'},{value: :search, name: 'Search'},{value: :cancel, name: 'Go Back'}])
     when :browse
       return browse
@@ -60,12 +61,12 @@ class Symptoms
     json = json.read
     json = JSON.parse(json, symbolize_names: true)
     build(json[0])
-    print `clear`
+    clear_screen
   end
 
   def prompt?(main:, help: '')
     prompt = TTY::Prompt.new
-    print `clear`
+    clear_screen
     prompt.select(
       main,
       [{value: false, name:'no'},{value: true, name: 'yes'}],

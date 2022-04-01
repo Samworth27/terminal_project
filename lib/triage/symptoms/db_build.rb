@@ -20,7 +20,7 @@ module DBBuild
   end
 
   def build_init(size)
-    print `clear`
+    clear_screen
     puts 'Storing to Database'
     @bar = TTY::ProgressBar.new(':bar [:current/ :total] :eta remaining', format_progressbar(size))
     @codes = []
@@ -58,7 +58,6 @@ module DBBuild
     @storage.transaction do
       @storage[:size] = @size
       @storage[:codes] = @codes
-      puts @codes[0..10]
     end
   end
 

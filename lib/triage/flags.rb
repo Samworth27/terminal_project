@@ -12,6 +12,8 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 class Flags
   @flags = {}
 
+  # @param value [Int] The existing value of bitwise flag mask to modify
+  # @param flag_names [Array<String>] Only set this the first time you use it
   def initialize(value, flag_names = '')
     @value = value
 
@@ -39,7 +41,7 @@ class Flags
   end
 
   def flag_active(flags, item)
-  !(flags & item).zero?
+    !(flags & item).zero?
   end
 
   def create_method(name, value)

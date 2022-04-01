@@ -6,7 +6,7 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 require 'rainbow'
 
 class Person
-
+    attr_reader :name, :dob, :address, :number
   def initialize
     @name = collect_name
     @dob = collect_dob
@@ -16,6 +16,7 @@ class Person
   end
 
   def collect_name
+    clear_screen
     prompt = TTY::Prompt.new
     prompt.collect do
     key(:fname).ask("First Name:") { |p| p.validate(/^[a-z]+$/i)}
@@ -24,6 +25,7 @@ class Person
   end
 
   def collect_dob
+    clear_screen
     prompt = TTY::Prompt.new
     month_regex = /(^0?[1-9]$)|(^1[0-2]$)|^(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|(Nov|Dec)(?:ember)?)$/i
     dob = {}
@@ -34,6 +36,7 @@ class Person
   end
 
   def collect_address
+    clear_screen
     prompt = TTY::Prompt.new
     prompt.collect do
       key(:unit).ask("Unit/ Appartment Number [optional]")
@@ -45,6 +48,7 @@ class Person
   end
 
   def collect_phone
+    clear_screen
     r = /^(?<prefix>(?<country>\+?61)?(?<area>((?(<country>)|0)[2378])|((?(<country>)|0)[45])))(?<number>\d{8})$/
     prompt = TTY::Prompt.new
     loop do
