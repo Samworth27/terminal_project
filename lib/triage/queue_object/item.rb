@@ -24,10 +24,16 @@ class Item
   attr_reader :id, :personal, :flags, :time_presented
   attr_accessor :notes, :priority
 
-  def initialize(database)
+  def initialize(database, test=nil)
     @id = self.class.count
+    @database = @database
     self.class.count += 1
-    @personal = Person.new
+    if test.nil?
+      @personal = Person.new
+      modify(@database)
+    else
+      @priority = test
+    end
     @time_presented = Time.new
   end
 
@@ -60,7 +66,8 @@ class Item
   end
 
   def to_s
-    ["Surname, First Name: #{@lname}, #{@fname}",
+    fname, lname = @personal[:name].values
+    ["Surname, First Name: #{lname}, #{fname}",
     "ID: #{@id}",
     "Priority: #{@priority}",
     # "Flags-Raw: #{@flags}",
@@ -68,6 +75,10 @@ class Item
     Flags.new(@flags).active_flags.map { |item| "\t #{@database.fetch_name(item)}"},
     'Notes: ',
     notes_to_s].join("\n")
+  end
+
+  def to_s_test
+    "ID: #{@id}\n Priority: #{@priority}\n Time presented: #{@time_presented}"
   end
 
   def notes_to_s
