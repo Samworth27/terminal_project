@@ -19,6 +19,7 @@ end
 # Init the queue
 queue = DynamicQueue.new('main', 'main queue', Symptoms.new(access))
 
+
 # Run Client
 if ARGV.include?('--server')
   queue.run_server
