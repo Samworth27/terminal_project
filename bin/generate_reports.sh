@@ -8,8 +8,9 @@ echo "Generating Reports"
 REPORT_PATH=./reports bundle exec rspec --format RspecHtmlReporter ./spec
 echo "Swapping branches"
 git switch gh-pages
-echo "Committing reports to git"
 pwd
+sleep 5
+echo "Committing reports to git"
 git commit ./reports
 git push
 git switch main
