@@ -1,3 +1,0 @@
-# Alias used to run reports and export to html. Accepts one mandatory argument [class_name]
-
-alias rspecp=' function _test(){ rspec "./spec/$1_spec.rb" -f h -o "./spec/report/$1_report.html"; rspec -f h -o "./spec/report/triage_report.html";  }; _test'

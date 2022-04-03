@@ -12,18 +12,20 @@ class Item
   attr_reader :id, :personal, :flags, :time_presented
   attr_accessor :notes, :priority
 
-  def initialize(database, test=nil)
+  def initialize(database, id=nil, test = nil)
     @test = test
-    @id = self.class.count
+    @id = id
+    @id = self.class.count if id.nil?
     @database = database
     self.class.count += 1
     @flags = 0b00000000
     @notes = []
+    @personal = Person.new(test)
     if test.nil?
-      @personal = Person.new
       modify(@database)
     else
-      @priority = @test
+      @priority = (test == true ? @priority = [1,2,3].sample : priority)
+      
     end
     @time_presented = Time.new
   end
@@ -66,7 +68,7 @@ class Item
     end
   end
 
-  def to_s
+  def pretty
     if @test.nil?
       fname, lname = @personal.name.values
       ["Surname, First Name: #{lname}, #{fname}",
@@ -82,6 +84,13 @@ class Item
     end
   end
 
+  def to_hash
+    {id:@id, person: @personal, priority: @priority, time_presented: @time_presented, flags: @flags, notes:@notes}
+  end
+
+  def to_s
+    {id:@id, person: @personal.name.values.join(' '), priority: @priority, time_presented: @time_presented, flags: @flags, notes:@notes}.map { |k,v| "#{k}: #{v}"}.join("\n")
+  end
 
   def notes_to_s
     @notes.map do |item| 
