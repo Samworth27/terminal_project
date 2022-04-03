@@ -21,3 +21,6 @@ Using `--testing` will remove all prompts when creating queue items and will pop
 ### Related links
 [Project Board](https://github.com/users/Samworth27/projects/2)  
 [RSPEC Testing Reports](https://samworth27.github.io/triage/reports/overview.html)
+
+![Project Boards](./docs/project.png)
+![Testing](./docs/testing.png)
