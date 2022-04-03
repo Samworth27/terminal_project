@@ -6,9 +6,6 @@ Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__))
 
 # Custom binary flag data type
 
-
-
-
 class Flags
   @flags = {}
 
@@ -35,41 +32,46 @@ class Flags
     end
 
     # Create an instance method for every value of flag from the Class insance variable `flag`
-    self.class.flags.each do |flag, flag_value|
-      create_method(flag, flag_value)
+    # self.class.flags.each do |flag, flag_value|
+    #   create_method(flag, flag_value)
+    # end
+  end
+
+  # Allows user to set flag values
+  def set_flags
+    symptoms = Symptoms.new(:user)
+    prompt = TTY::Prompt.new
+    loop do
+      flag = symptoms.get_code
+      return @value if flag == :exit
+      set_to = prompt.select(
+        "Currently '#{flag?(flag)}' set to [true/ false]",
+        [{value: true, name: 'True'},{value: false, name: "False"}])
+      set_flag(flag, set_to)
     end
   end
 
-  def flag_active(flags, item)
-    !(flags & item).zero?
-  end
-
-  def create_method(name, value)
-    # Returns true if the flag `name` is on
-    define_singleton_method(name) do
-      flag_active(@value, value)
-    end
-
-    # Input true or false to set flag
-    define_singleton_method("#{name}_set") do |set|
-      if set == true
-        @value |= value
-      elsif set == false
-        @value &= (value ^ (2**self.class.flags.size - 1))
-      end
-    end
-  end
-
+  # Set a flag to either true or false
   def set_flag(name, value)
+    raise(InvalidInput, "#{value} is not [true/false]") unless [true, false].include? value
     if value == true
-        @value |= flag_value(name)
-      elsif set == false
-        @value &= (flag_value(name) ^ (2**self.class.flags.size - 1))
-      end
+      @value |= flag_value(name)
+    elsif value == false
+      @value &= (flag_value(name) ^ (2**self.class.flags.size - 1))
+    end
   end
 
   def flag?(code)
-    flag_active(@value, code)
+    flag_active(@value, flag_value(code))
+  end
+
+  def active_flags
+    return self.class.flags.filter {|k, v| flag_active(@value,v)}.keys
+  end
+
+
+  def flag_active(flags, item)
+    !(flags & item).zero?
   end
 
   def flags
@@ -77,11 +79,7 @@ class Flags
   end
 
   class << self
-    attr_reader :flags
-  end
-
-  class << self
-    attr_writer :flags
+    attr_accessor :flags
   end
 
   def to_s
@@ -99,21 +97,21 @@ class Flags
   def flag_value(code)
     self.class.flags[code]
   end
+  
+  # def create_method(name, value)
+  #   # Returns true if the flag `name` is on
+  #   define_singleton_method(name) do
+  #     flag_active(@value, value)
+  #   end
 
-  def active_flags
-    return self.class.flags.filter {|k, v| flag_active(@value,v)}.keys
-  end
-
-  def set_flags
-    symptoms = Symptoms.new(:user)
-    prompt = TTY::Prompt.new
-    loop do
-      flag = symptoms.get_code
-      return @value if flag == :exit
-      set_to = prompt.select(
-        "Currently '#{flag?(flag_value(flag))}' set to [true/ false]",
-        [{value: true, name: 'True'},{value: false, name: "False"}])
-      set_flag(flag, set_to)
-    end
-  end
+  #   # Input true or false to set flag
+  #   define_singleton_method("#{name}_set") do |set|
+  #     if set == true
+  #       @value |= value
+  #     elsif set == false
+  #       @value &= (value ^ (2**self.class.flags.size - 1))
+  #     end
+  #   end
+  # end
+  
 end

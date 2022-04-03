@@ -6,3 +6,6 @@ end
 
 class DBInputError < DBError
 end
+
+class InvalidInput < AppError
+end

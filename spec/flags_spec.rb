@@ -1,4 +1,5 @@
 require './lib/triage/flags'
+require './lib/triage/common'
 
 describe 'Flag' do
   let (:test_flags) do
@@ -6,44 +7,44 @@ describe 'Flag' do
     0.upto(7) {|i| temp["flag_#{i+1}".to_sym]=2**i}
     temp
   end
+  let (:flags) {Flags.new(0,'testing')}
   
-
-  it 'can be instansitated' do
-    expect(Flags.new('testing')).to exist
+  it 'can be created' do
+    expect(flags).to exist
   end
 
-  describe '#Class' do
-    describe 'initilises correctly' do
-      it 'stores flag values once in a class instance variable' do
-        test = Flags.new('testing')
-        expect(test.class.flags).to eq(test_flags)
-      end
-      it 'will not overwrite class instance variable `flags' do
-        test = Flags.new([:bad_1, :bad_2, :bad_3])
-        expect(test.class.flags).to eq(test_flags)
-      end
-    end
-    describe 'self.flags' do
-      it 'can return flags value' do
-        test = Flags.new
-        expect(test.class.flags).to eq(test_flags)
-      end
-      it 'can update flags value' do
-        test = Flags.new
-        test.class.flags = {nothing: 0}
-        expect(test.class.flags).to eq({nothing: 0})
-        # Need to reset flags or other tests will fail
-        test.class.flags = test_flags
-      end
+  it 'can load test values' do
+    expect(flags.class.flags).to eq(test_flags)
+  end
+
+  it 'will not overwrite class instance flags variable' do
+    expect(Flags.new(0,['new']).class.flags).to eq(test_flags)
+  end
+
+  describe 'flags?' do
+    it 'will return the state of a flag' do
+      expect(flags.flag?(:flag_1)).to eq(false)
     end
   end
 
+  describe '#set_flag' do
+   it 'will set a flag value' do
+    flags.set_flag(:flag_1, true)
+    expect(flags.flag?(:flag_1)).to eq(true)
+    flags.set_flag(:flag_1, false)
+    expect(flags.flag?(:flag_1)).to eq(false)
+   end
+   it 'will throw an error if invalid value is passed' do
+    expect{flags.set_flag(:flag_1,'asf')}.to raise_error(InvalidInput)
+   end
+  end
 
-  describe '#initilize' do
-    it 'can create method calls for each flag' do
-      test_flags.each do |flag, _value|
-        expect(Flags.new.public_send(flag)).to eq(false)
-      end
+  describe '#active_flags' do
+    it 'will return a list of all active flags' do
+      flags.set_flag(:flag_1, true)
+      flags.set_flag(:flag_3, true)
+      flags.set_flag(:flag_8, true)
+      expect(flags.active_flags).to eq([:flag_1, :flag_3, :flag_8])
     end
   end
 end
