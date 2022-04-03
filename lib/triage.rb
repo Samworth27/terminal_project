@@ -12,7 +12,7 @@ else
 end
 
 # Init the queue
-queue = QueueObject.new('main', 'main queue', Symptoms.new(access))
+queue = DynamicQueue.new('main', 'main queue', Symptoms.new(access))
 
 # Run Client
 queue.run

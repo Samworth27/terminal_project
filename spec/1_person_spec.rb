@@ -1,6 +1,6 @@
-require './lib/triage/queue_object/item/person'
+require './lib/triage/dynamic_queue/item/person'
 
-describe Person do
+describe 'Person Class' do
   it 'is defined' do
     expect(Person.exists?).to eq(true)
   end

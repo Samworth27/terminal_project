@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 # gem "rails"
 
 gem 'respec'
+gem 'rspec_html_reporter'
 
 gem 'tty-progressbar'
 gem 'tty-box'

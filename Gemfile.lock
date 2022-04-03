@@ -1,15 +1,25 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (7.0.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
     ethon (0.15.0)
       ffi (>= 1.15.0)
     ffi (1.15.5)
+    i18n (1.10.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.15.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
     rainbow (3.1.1)
     respec (0.9.1)
       rspec (>= 2.11)
+    rouge (1.11.1)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -23,6 +33,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+    rspec_html_reporter (1.0.3)
+      activesupport
+      rouge (~> 1.6)
+      rspec
     strings (0.2.1)
       strings-ansi (~> 0.2)
       unicode-display_width (>= 1.5, < 3.0)
@@ -53,6 +67,8 @@ GEM
       tty-screen (~> 0.8)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
     unicode_utils (1.4.0)
     wisper (2.0.1)
@@ -63,6 +79,7 @@ PLATFORMS
 DEPENDENCIES
   rainbow
   respec
+  rspec_html_reporter
   tty-box
   tty-progressbar
   tty-prompt

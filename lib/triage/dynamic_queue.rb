@@ -3,11 +3,11 @@
 # Load all children
 Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
 
-# QueueObject Class
+# DynamicQueue Class
 # This object stores information relating to a specific queue.
 # Items can be assigned to the queue with a priority and the next 
 # item can be requested
-class QueueObject
+class DynamicQueue
 
   #@param name [String]
   #@param description [String]
@@ -67,7 +67,7 @@ class QueueObject
   end
 
   def queue
-    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item}\n"}
+    @queue.each_with_index.map { |item, i| "Position in DynamicQueue: #{i}\n #{item}\n"}
   end
 
   def [] (index)
