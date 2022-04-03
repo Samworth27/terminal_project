@@ -17,3 +17,7 @@ gem 'typhoeus'
 gem "tty-screen", "~> 0.8.1"
 
 gem "tty-table", "~> 0.12.0"
+
+gem "json", "~> 2.6"
+
+gem "oj", "~> 3.13"

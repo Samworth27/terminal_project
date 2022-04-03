@@ -13,7 +13,9 @@ GEM
     ffi (1.15.5)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
+    json (2.6.1)
     minitest (5.15.0)
+    oj (3.13.11)
     pastel (0.8.0)
       tty-color (~> 0.5)
     rainbow (3.1.1)
@@ -77,6 +79,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  json (~> 2.6)
+  oj (~> 3.13)
   rainbow
   respec
   rspec_html_reporter

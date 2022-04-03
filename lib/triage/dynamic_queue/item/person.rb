@@ -9,11 +9,20 @@ require 'date'
 
 class Person
     attr_reader :name, :dob, :address, :number
-  def initialize
-    @name = collect_name
-    @dob = collect_dob
-    @address = collect_address
-    @number = collect_phone
+  def initialize(test = nil)
+    if test.nil?
+      @name = collect_name
+      @dob = collect_dob
+      @address = collect_address
+      @number = collect_phone
+    else
+      fnames = ['John', 'Mark', 'James']
+      lnames = ['Smith', 'Gardener', 'Cook']
+      @name = {fname: fnames.sample, lname: lnames.sample}
+      @dob = Date.parse('1 Jan 1990')
+      @address = {unit: nil, number: '1', street: 'main road', suburb: 'Brisbane', postcode:'4000'}
+      @number = '0401000000'
+    end
   end
 
   def collect_name
@@ -72,4 +81,16 @@ class Person
   def self.exists?
     true
   end
+
+  def to_s
+    {name: @name.values.join(' '), dob:@dob.strftime("%Y-%m-%d"), address:@address.values.join(' '), number: @number}.map { |k,v| "#{k}: #{v}"}.join("\n")
+  end
+
+  def inspect
+    {name: @name, dob:@dob, address:@address, number: @number}
+  end
+
+  # def to_hash
+  #   {name: @name, dob:@dob, address:@address, number: @number}
+  # end
 end

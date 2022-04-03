@@ -3,11 +3,16 @@
 # Load all children
 Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
 
+require 'socket'
+require 'oj'
+
 # DynamicQueue Class
 # This object stores information relating to a specific queue.
 # Items can be assigned to the queue with a priority and the next 
 # item can be requested
 class DynamicQueue
+  include QueueServer
+  include QueueClient
 
   #@param name [String]
   #@param description [String]
@@ -26,7 +31,9 @@ class DynamicQueue
     Flags.new(0,@database.codes)
   end
 
-  def run
+  
+
+  def run_local(test)
     prompt = TTY::Prompt.new
     loop do
       clear_screen
@@ -34,7 +41,7 @@ class DynamicQueue
         {value: :add, name: "Add a patient"},
         {value: :next, name: 'Get next patient'}])
       when :add
-        add_item
+        add_item(Item.new(@database),test)
         puts "+"*80
         puts queue
         puts '+' * 80
@@ -48,8 +55,7 @@ class DynamicQueue
     end
   end
 
-  def add_item(test=nil)
-    item = Item.new(@database, test)
+  def add_item(item, test = nil)
     begin
       @queue.insert(@queue.find_index{|x| x.priority>item.priority},item)
     rescue

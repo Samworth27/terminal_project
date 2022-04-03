@@ -10,9 +10,20 @@ if ARGV.include?('--admin')
 else
   access = :user
 end
+if ARGV.include?('--testing')
+  testing = true
+else
+  testing = nil
+end
 
 # Init the queue
 queue = DynamicQueue.new('main', 'main queue', Symptoms.new(access))
 
 # Run Client
-queue.run
+if ARGV.include?('--server')
+  queue.run_server
+elsif ARGV.include?('--client')
+  queue.run_client(testing)
+else
+  queue.run_local(testing)
+end
