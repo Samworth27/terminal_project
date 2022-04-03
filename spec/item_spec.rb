@@ -1,7 +1,14 @@
 require './lib/triage/queue_object/item'
+require './lib/triage/common'
+require './lib/triage/symptoms'
+
 
 describe Item do
-  let(:test_item) { Item.new({fname: 'John', lname: 'Smith'})}
+  before (:each) do
+    stub_const("Person", Class.new)
+  end
+  let(:test_item) { Item.new(Symptoms.new(:user),1)}
+
   it 'can be created' do
     expect(test_item).to exist
   end
@@ -14,14 +21,6 @@ describe Item do
             item_id = Item.count
             expect(test_item.id).to eq(item_id)
           end
-        end
-      end
-      describe '@name' do
-        it 'can init @fname correctly' do
-          expect(test_item.fname).to eq('John')
-        end
-        it 'can init @lname correctly' do
-          expect(test_item.lname).to eq('Smith')
         end
       end
       it 'can init @time_presented correctly' do
@@ -38,7 +37,7 @@ describe Item do
       end
 
       it 'can init @priority correctly' do
-        expect(test_item.priority).to eq(3)
+        expect(test_item.priority).to eq(1)
       end
     end
   end
@@ -47,7 +46,7 @@ describe Item do
     it 'can modify item variable'
   end
 
-  descrive '#archive' do
+  describe '#archive' do
     it 'can archive item'
   end
 end

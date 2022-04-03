@@ -3,10 +3,6 @@
 # Load all children
 Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
 
-# Custom Error Class
-class InvalidInput < StandardError
-end
-
 # QueueObject Class
 # This object stores information relating to a specific queue.
 # Items can be assigned to the queue with a priority and the next 
@@ -28,28 +24,6 @@ class QueueObject
     @queue = []
     @database = database
     Flags.new(0,@database.codes)
-  end
-
-  def queue
-    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item}\n"}
-  end
-
-  def add_item
-      item = Item.new(@database)
-    begin
-      @queue.insert(@queue.find_index{|x| x.priority>item.priority},item)
-    rescue
-      @queue.append(item)
-    end
-  end
-
-  def view_item(id)
-    raise(InvalidInput, "inputed #{id.class} not Integer") if id.class != Integer
-    @queue.select { |item| item[:id] = id}
-  end
-
-  def next_item
-    @queue.size > 0 ? @queue.shift : 'No items in queue'
   end
 
   def run
@@ -74,31 +48,37 @@ class QueueObject
     end
   end
 
-  def exist?
-    true
-  end
-
-  private
-
-  def add_item_test(pri)
-    item = Item.new(@database, pri)
+  def add_item(test=nil)
+    item = Item.new(@database, test)
     begin
-      @queue.insert(@queue.find_index{|x| x.priority>pri},item)
+      @queue.insert(@queue.find_index{|x| x.priority>item.priority},item)
     rescue
       @queue.append(item)
     end
   end
 
-  def next_item_test
-    @queue.size > 0 ? @queue.shift.to_s_test : 'No items in queue'
+  def view_item(id)
+    raise(InvalidInput, "inputed #{id.class} not Integer") if id.class != Integer
+    @queue.select { |item| item.id == id}[0]
   end
 
-  def queue_test
-    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item.to_s_test}\n"}
+  def next_item
+    @queue.size > 0 ? @queue.shift : 'No item in queue'
   end
 
+  def queue
+    @queue.each_with_index.map { |item, i| "Position in Queue: #{i}\n #{item}\n"}
+  end
 
+  def [] (index)
+    @queue[index]
+  end
 
+  def size
+    @queue.size
+  end
 
-
+  def exist?
+    true
+  end
 end

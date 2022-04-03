@@ -13,6 +13,7 @@ class Item
   attr_accessor :notes, :priority
 
   def initialize(database, test=nil)
+    @test = test
     @id = self.class.count
     @database = database
     self.class.count += 1
@@ -22,7 +23,7 @@ class Item
       @personal = Person.new
       modify(@database)
     else
-      @priority = test
+      @priority = @test
     end
     @time_presented = Time.new
   end
@@ -66,20 +67,21 @@ class Item
   end
 
   def to_s
-    fname, lname = @personal.name.values
-    ["Surname, First Name: #{lname}, #{fname}",
-    "ID: #{@id}",
-    "Priority: #{@priority}",
-    "Time Presented: #{days_ago(@time_presented)} @ #{@time_presented.strftime("%H%M")}",
-    'Symptoms/ Diagnosis:',
-    Flags.new(@flags).active_flags.map { |item| "\t #{@database.fetch_name(item)}"},
-    'Notes: ',
-    notes_to_s].join("\n")
+    if @test.nil?
+      fname, lname = @personal.name.values
+      ["Surname, First Name: #{lname}, #{fname}",
+      "ID: #{@id}",
+      "Priority: #{@priority}",
+      "Time Presented: #{days_ago(@time_presented)} @ #{@time_presented.strftime("%H%M")}",
+      'Symptoms/ Diagnosis:',
+      Flags.new(@flags).active_flags.map { |item| "\t #{@database.fetch_name(item)}"},
+      'Notes: ',
+      notes_to_s].join("\n")
+    else
+      "ID: #{@id}\n Priority: #{@priority}\n Time presented: #{@time_presented.strftime("%H%M")}"
+    end
   end
 
-  def to_s_test
-    "ID: #{@id}\n Priority: #{@priority}\n Time presented: #{@time_presented}"
-  end
 
   def notes_to_s
     @notes.map do |item| 

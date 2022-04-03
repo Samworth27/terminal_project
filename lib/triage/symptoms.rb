@@ -35,6 +35,12 @@ class Symptoms
     
   end
 
+  def inspect
+    @storage.transaction do
+      "Database containing #{@storage[:size]} items"
+    end
+  end
+
   def codes  
     @storage.transaction do
       return @storage[:codes]

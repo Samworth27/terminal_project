@@ -4,6 +4,8 @@
 Dir.glob(File.expand_path("../#{File.basename(__FILE__, ".*")}/*.rb", __FILE__)).each { |file| require_relative "#{File.basename(__FILE__, ".*")}/#{File.basename(file)}"}
 
 require 'rainbow'
+require 'tty-prompt'
+require 'date'
 
 class Person
     attr_reader :name, :dob, :address, :number
@@ -12,7 +14,6 @@ class Person
     @dob = collect_dob
     @address = collect_address
     @number = collect_phone
-
   end
 
   def collect_name
@@ -66,5 +67,9 @@ class Person
         prompt.error("Invalid Number")
       end
     end
+  end
+
+  def self.exists?
+    true
   end
 end
