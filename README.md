@@ -1,6 +1,8 @@
 ## T1A3 - Terminal Project
 # Dynamic Queue System
 
+This is a system designed to manage a tickted queue where queue items are prioritised by the user. 
+It currently can be run as a standalone system or using a server to manage the queue and multiple clients that are able to add items to the queue and request the next queue item 
 
 
 
